@@ -20,6 +20,8 @@ bustripdata %>%
 
 ![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
+Below is the data used for the graph above, which explains the completed trip percentage per year. The type shows the difference between the actual and target (predicted) data gathered for NYCT Bus.
+
 ``` r
 bustripdata <- read.csv("bustrip.csv")
 knitr::kable(bustripdata)
