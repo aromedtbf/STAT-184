@@ -63,6 +63,6 @@ hudson <-
   filter(INDICATOR_SEQ == 28345)
 hudson <- 
   hudson %>%
-  select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL) %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
 knitr::kable(hudson)
 ```
