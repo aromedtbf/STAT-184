@@ -46,7 +46,7 @@ bustripdata %>%
   xlab("Year") + 
   ylab("% of Completed Trips")
 ```
-
+  
 Below is the data used for the graph above, which explains the completed trip percentage per year. The type shows the difference between the actual and target (predicted) data gathered for NYCT Bus.
 
 ```{r, message=FALSE, warning=FALSE}
@@ -56,8 +56,13 @@ knitr::kable(bustripdata)
 
 Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
 
-```{r}
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-hudson <- mnrr %>% filter(INDICATOR_SEQ == 28345)
+hudson <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ == 28345)
+hudson <- 
+  hudson %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL) %>%
 knitr::kable(hudson)
 ```
