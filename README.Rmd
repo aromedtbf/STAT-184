@@ -19,6 +19,10 @@ library(gtfsr)
 library(magrittr)
 library(dplyr)
 ```
+*Source file* 
+```{r, results='asis', echo=FALSE}
+includeSourceDocuments()
+```
 
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.  
 In order to use this data, I had to apply through its website in order to obtain this data. The given data will be provided along with this file, and in the website. In order to make this data easier to read, there were csv files created in order to yield a viable graph and for data wrangling purposes.
