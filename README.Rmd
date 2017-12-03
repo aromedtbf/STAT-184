@@ -15,6 +15,9 @@ library(mosaic)
 library(mosaicData)
 library(dplyr)
 library(ggplot2)
+library(gtfsr)
+library(magrittr)
+library(dplyr)
 ```
 
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.  
