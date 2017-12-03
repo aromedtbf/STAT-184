@@ -25,6 +25,8 @@ In order to use this data, I had to apply through its website in order to obtain
 
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well.
 
+Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
+
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 bustripdata <- read.csv("bustrip.csv")
 bustripdata %>% 
