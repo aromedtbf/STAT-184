@@ -54,3 +54,10 @@ bustripdata <- read.csv("bustrip.csv")
 knitr::kable(bustripdata)
 ```
 
+Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
+
+```{r}
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+hudson <- mnrr %>% filter(INDICATOR_SEQ == 28345)
+knitr::kable(hudson)
+```
