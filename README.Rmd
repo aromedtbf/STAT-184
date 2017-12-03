@@ -18,25 +18,12 @@ library(ggplot2)
 library(gtfsr)
 library(magrittr)
 library(dplyr)
-library(httr)
 ```
 
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.  
 In order to use this data, I had to apply through its website in order to obtain this data. The given data will be provided along with this file, and in the website. In order to make this data easier to read, there were csv files created in order to yield a viable graph and for data wrangling purposes.
 
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well.
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-GTFS_API_KEY="b742b4e5-f67d-4eac-9c90-770c2a5bc5f5"
-set_api_key()
-feedlist_df <- get_feedlist() %>%
-  filter(grepl('NYC Subway GTFS', t, ignore.case= TRUE))
-NYC <- import_gtfs(feedlist_df$url_d)
-routes <- NYC[['routes_df']] %>%
-  slice(which(grepl('a|b', route_id, ignore.case=TRUE))) %>%
-  '$'('route_id')
-NYC %>% map_gtfs(route_ids = routes)
-```
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
@@ -48,5 +35,10 @@ bustripdata %>%
   geom_point() + 
   xlab("Year") + 
   ylab("% of Completed Trips")
+```
+
+```{r, message=FALSE, warning=FALSE}
+bustripdata <- read.csv("bustrip.csv")
+knitr::kable(bustripdata)
 ```
 
