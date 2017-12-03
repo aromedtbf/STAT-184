@@ -18,6 +18,12 @@ library(ggplot2)
 library(gtfsr)
 library(magrittr)
 library(dplyr)
+require(mosaicData)
+require(mosaic)
+require(ggplot2)
+require(gtfsr)
+require(magrittr)
+require(dplyr)
 ```
 *Source file* 
 ```{r, results='asis', echo=FALSE}
