@@ -1,6 +1,6 @@
 ---
 title: "The Metropolitan Transportation Authority of New York City"
-#author: Anthony Josue Roman
+author: Anthony Josue Roman
 output: github_document
 ---
 
@@ -61,7 +61,11 @@ mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
   select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-knitr::kable(mnrr)
+mnrr1 <-
+  mnrr %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mnrr1)
 ```
 
 Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
@@ -74,11 +78,59 @@ knitr::kable(hudson)
 Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
 
 ```{r, message=FALSE, warning=FALSE}
-bustripdata <- read.csv("mnrrh.csv")
-bustripdata %>% 
+mnrrh <- read.csv("mnrrh.csv")
+mnrrh %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth() +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals")
+```
+
+Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph
+
+```{r, echo=TRUE, message=FALSE}
+mnrr <- read.csv("mnrr.csv")
+pjl <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28460)
+knitr::kable(pjl)
+pjl %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals")
+```
+
+```{r, echo=TRUE, message=FALSE}
+mnrr <- read.csv("mnrr.csv")
+pjl <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28460)
+pjl %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals")
+```
+
+Below shows the comparisons between all the MNRR trunk lines, with each indicator name being the name of the MNRR trunk line.
+
+```{r, echo=TRUE, message=FALSE}
+mnrr <- read.csv("mnrr.csv")
+mnrr1 <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
+mnrra <-
+  mnrr1 %>%
+  filter(type == "actual")
+mnrra %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals") +
+  ggtitle("Actual Arrival Times for Each Trunk Line")
 ```

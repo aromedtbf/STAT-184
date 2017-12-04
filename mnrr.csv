@@ -1,0 +1,257 @@
+INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,count,type
+28345,Hudson Line - OTP  ,2008,98,target
+28345,Hudson Line - OTP  ,2008,98.11666667,actual
+28345,Hudson Line - OTP  ,2009,97.9,target
+28345,Hudson Line - OTP  ,2009,97.825,actual
+28345,Hudson Line - OTP  ,2010,98.1,target
+28345,Hudson Line - OTP  ,2010,98.25833333,actual
+28345,Hudson Line - OTP  ,2011,98.2,target
+28345,Hudson Line - OTP  ,2011,97.925,actual
+28345,Hudson Line - OTP  ,2012,98.2,target
+28345,Hudson Line - OTP  ,2012,98.46666667,actual
+28345,Hudson Line - OTP  ,2013,98.2,target
+28345,Hudson Line - OTP  ,2013,97.7,actual
+28345,Hudson Line - OTP  ,2014,94,target
+28345,Hudson Line - OTP  ,2014,91.48333333,actual
+28345,Hudson Line - OTP  ,2015,93,target
+28345,Hudson Line - OTP  ,2015,93.73333333,actual
+28345,Hudson Line - OTP  ,2016,93,target
+28345,Hudson Line - OTP  ,2016,95.25833333,actual
+28345,Hudson Line - OTP  ,2017,93,target
+28345,Hudson Line - OTP  ,2017,95.82222222,actual
+28346,Harlem Line - OTP  ,2008,98,target
+28346,Harlem Line - OTP  ,2008,98.53333333,actual
+28346,Harlem Line - OTP  ,2009,98.2,target
+28346,Harlem Line - OTP  ,2009,98.525,actual
+28346,Harlem Line - OTP  ,2010,98.3,target
+28346,Harlem Line - OTP  ,2010,98.70833333,actual
+28346,Harlem Line - OTP  ,2011,98.3,target
+28346,Harlem Line - OTP  ,2011,97.61666667,actual
+28346,Harlem Line - OTP  ,2012,98.3,target
+28346,Harlem Line - OTP  ,2012,98.5,actual
+28346,Harlem Line - OTP  ,2013,98.3,target
+28346,Harlem Line - OTP  ,2013,97.35833333,actual
+28346,Harlem Line - OTP  ,2014,94,target
+28346,Harlem Line - OTP  ,2014,93.23333333,actual
+28346,Harlem Line - OTP  ,2015,93,target
+28346,Harlem Line - OTP  ,2015,93.08333333,actual
+28346,Harlem Line - OTP  ,2016,93,target
+28346,Harlem Line - OTP  ,2016,94.875,actual
+28346,Harlem Line - OTP  ,2017,93,target
+28346,Harlem Line - OTP  ,2017,95.87777778,actual
+28347,New Haven Line - OTP,2008,97.1,target
+28347,New Haven Line - OTP,2008,97.64166667,actual
+28347,New Haven Line - OTP,2009,97,target
+28347,New Haven Line - OTP,2009,96.725,actual
+28347,New Haven Line - OTP,2010,97,target
+28347,New Haven Line - OTP,2010,97.2,actual
+28347,New Haven Line - OTP,2011,97.2,target
+28347,New Haven Line - OTP,2011,93.86666667,actual
+28347,New Haven Line - OTP,2012,97.2,target
+28347,New Haven Line - OTP,2012,97.70833333,actual
+28347,New Haven Line - OTP,2013,97.2,target
+28347,New Haven Line - OTP,2013,94.75833333,actual
+28347,New Haven Line - OTP,2014,92,target
+28347,New Haven Line - OTP,2014,88.475,actual
+28347,New Haven Line - OTP,2015,93,target
+28347,New Haven Line - OTP,2015,90.83333333,actual
+28347,New Haven Line - OTP,2016,93,target
+28347,New Haven Line - OTP,2016,93.10833333,actual
+28347,New Haven Line - OTP,2017,93,target
+28347,New Haven Line - OTP,2017,93.88888889,actual
+28445,On-Time Performance (West of Hudson),2008,95,target
+28445,On-Time Performance (West of Hudson),2008,96.26666667,actual
+28445,On-Time Performance (West of Hudson),2009,96.2,target
+28445,On-Time Performance (West of Hudson),2009,95.71666667,actual
+28445,On-Time Performance (West of Hudson),2010,96.3,target
+28445,On-Time Performance (West of Hudson),2010,96.70833333,actual
+28445,On-Time Performance (West of Hudson),2011,96.4,target
+28445,On-Time Performance (West of Hudson),2011,95.35,actual
+28445,On-Time Performance (West of Hudson),2012,96.4,target
+28445,On-Time Performance (West of Hudson),2012,97.4,actual
+28445,On-Time Performance (West of Hudson),2013,96.85,target
+28445,On-Time Performance (West of Hudson),2013,96.91666667,actual
+28445,On-Time Performance (West of Hudson),2014,97,target
+28445,On-Time Performance (West of Hudson),2014,94.3,actual
+28445,On-Time Performance (West of Hudson),2015,95.5,target
+28445,On-Time Performance (West of Hudson),2015,93.875,actual
+28445,On-Time Performance (West of Hudson),2016,95.5,target
+28445,On-Time Performance (West of Hudson),2016,96.51666667,actual
+28445,On-Time Performance (West of Hudson),2017,95.5,target
+28445,On-Time Performance (West of Hudson),2017,94.63333333,actual
+28460,Port Jervis Line - OTP ,2008,94.4,target
+28460,Port Jervis Line - OTP ,2008,95.40833333,actual
+28460,Port Jervis Line - OTP ,2009,95,target
+28460,Port Jervis Line - OTP ,2009,95.94166667,actual
+28460,Port Jervis Line - OTP ,2010,95.2,target
+28460,Port Jervis Line - OTP ,2010,95.08333333,actual
+28460,Port Jervis Line - OTP ,2011,95.5,target
+28460,Port Jervis Line - OTP ,2011,92.85,actual
+28460,Port Jervis Line - OTP ,2012,95.5,target
+28460,Port Jervis Line - OTP ,2012,96.13333333,actual
+28460,Port Jervis Line - OTP ,2013,96.025,target
+28460,Port Jervis Line - OTP ,2013,96.30833333,actual
+28460,Port Jervis Line - OTP ,2014,96.2,target
+28460,Port Jervis Line - OTP ,2014,93.45,actual
+28460,Port Jervis Line - OTP ,2015,95,target
+28460,Port Jervis Line - OTP ,2015,93.45,actual
+28460,Port Jervis Line - OTP ,2016,95,target
+28460,Port Jervis Line - OTP ,2016,95.875,actual
+28460,Port Jervis Line - OTP ,2017,95,target
+28460,Port Jervis Line - OTP ,2017,92.47777778,actual
+28461,Pascack Valley Line - OTP ,2008,95.6,target
+28461,Pascack Valley Line - OTP ,2008,96.86666667,actual
+28461,Pascack Valley Line - OTP ,2009,97,target
+28461,Pascack Valley Line - OTP ,2009,95.59166667,actual
+28461,Pascack Valley Line - OTP ,2010,97,target
+28461,Pascack Valley Line - OTP ,2010,97.775,actual
+28461,Pascack Valley Line - OTP ,2011,97,target
+28461,Pascack Valley Line - OTP ,2011,97.06666667,actual
+28461,Pascack Valley Line - OTP ,2012,97,target
+28461,Pascack Valley Line - OTP ,2012,98.28333333,actual
+28461,Pascack Valley Line - OTP ,2013,97.45,target
+28461,Pascack Valley Line - OTP ,2013,97.35833333,actual
+28461,Pascack Valley Line - OTP ,2014,97.6,target
+28461,Pascack Valley Line - OTP ,2014,94.85833333,actual
+28461,Pascack Valley Line - OTP ,2015,96.5,target
+28461,Pascack Valley Line - OTP ,2015,94.15,actual
+28461,Pascack Valley Line - OTP ,2016,96.5,target
+28461,Pascack Valley Line - OTP ,2016,96.975,actual
+28461,Pascack Valley Line - OTP ,2017,96.5,target
+28461,Pascack Valley Line - OTP ,2017,96.12222222,actual
+28463,Mean Distance Between Failures,2008,1.00E+05,target
+28463,Mean Distance Between Failures,2008,126518,actual
+28463,Mean Distance Between Failures,2009,105000,target
+28463,Mean Distance Between Failures,2009,93862.45455,actual
+28463,Mean Distance Between Failures,2010,115000,target
+28463,Mean Distance Between Failures,2010,142897.25,actual
+28463,Mean Distance Between Failures,2011,125000,target
+28463,Mean Distance Between Failures,2011,90371.5,actual
+28463,Mean Distance Between Failures,2012,135000,target
+28463,Mean Distance Between Failures,2012,174513.0833,actual
+28463,Mean Distance Between Failures,2013,155000,target
+28463,Mean Distance Between Failures,2013,159814.75,actual
+28463,Mean Distance Between Failures,2014,160000,target
+28463,Mean Distance Between Failures,2014,124214,actual
+28463,Mean Distance Between Failures,2015,185000,target
+28463,Mean Distance Between Failures,2015,163639.5,actual
+28463,Mean Distance Between Failures,2016,2.00E+05,target
+28463,Mean Distance Between Failures,2016,218203.1667,actual
+28463,Mean Distance Between Failures,2017,2.00E+05,target
+28463,Mean Distance Between Failures,2017,208706.125,actual
+28530,Customer Injury Rate,2008,3.2,target
+28530,Customer Injury Rate,2008,3.6825,actual
+28530,Customer Injury Rate,2009,3.2,target
+28530,Customer Injury Rate,2009,2.7225,actual
+28530,Customer Injury Rate,2010,2.8,target
+28530,Customer Injury Rate,2010,2.785,actual
+28530,Customer Injury Rate,2011,2.8,target
+28530,Customer Injury Rate,2011,3.579166667,actual
+28530,Customer Injury Rate,2012,2.783333333,target
+28530,Customer Injury Rate,2012,3.184166667,actual
+28530,Customer Injury Rate,2013,2.7,target
+28530,Customer Injury Rate,2013,4.215833333,actual
+28530,Customer Injury Rate,2014,2.7,target
+28530,Customer Injury Rate,2014,3.295,actual
+28530,Customer Injury Rate,2015,2.8,target
+28530,Customer Injury Rate,2015,5.0425,actual
+28530,Customer Injury Rate,2016,3.24,target
+28530,Customer Injury Rate,2016,2.713333333,actual
+28530,Customer Injury Rate,2017,3.14,target
+28530,Customer Injury Rate,2017,1.842222222,actual
+28627,Employee Lost Time and Restricted Duty Rate,2008,2,target
+28627,Employee Lost Time and Restricted Duty Rate,2008,1.049166667,actual
+28627,Employee Lost Time and Restricted Duty Rate,2009,1.9,target
+28627,Employee Lost Time and Restricted Duty Rate,2009,2.295833333,actual
+28627,Employee Lost Time and Restricted Duty Rate,2010,1.8,target
+28627,Employee Lost Time and Restricted Duty Rate,2010,1.824166667,actual
+28627,Employee Lost Time and Restricted Duty Rate,2011,1.7,target
+28627,Employee Lost Time and Restricted Duty Rate,2011,2.62,actual
+28627,Employee Lost Time and Restricted Duty Rate,2012,2,target
+28627,Employee Lost Time and Restricted Duty Rate,2012,1.903333333,actual
+28627,Employee Lost Time and Restricted Duty Rate,2013,1.75,target
+28627,Employee Lost Time and Restricted Duty Rate,2013,2.280833333,actual
+28627,Employee Lost Time and Restricted Duty Rate,2014,1.75,target
+28627,Employee Lost Time and Restricted Duty Rate,2014,2.866666667,actual
+28627,Employee Lost Time and Restricted Duty Rate,2015,2,target
+28627,Employee Lost Time and Restricted Duty Rate,2015,2.565833333,actual
+28627,Employee Lost Time and Restricted Duty Rate,2016,2.34,target
+28627,Employee Lost Time and Restricted Duty Rate,2016,2.929166667,actual
+28627,Employee Lost Time and Restricted Duty Rate,2017,2.56,target
+28627,Employee Lost Time and Restricted Duty Rate,2017,3.056666667,actual
+55512,Total Ridership ,2008,43484480.92,target
+55512,Total Ridership ,2008,44694353.75,actual
+55512,Total Ridership ,2009,45432199.08,target
+55512,Total Ridership ,2009,42744537.58,actual
+55512,Total Ridership ,2010,41864369.42,target
+55512,Total Ridership ,2010,42987957.67,actual
+55512,Total Ridership ,2011,43289693.08,target
+55512,Total Ridership ,2011,43446730.08,actual
+55512,Total Ridership ,2012,44470348.67,target
+55512,Total Ridership ,2012,44900279.92,actual
+55512,Total Ridership ,2013,45988266.67,target
+55512,Total Ridership ,2013,44673619.83,actual
+55512,Total Ridership ,2014,45607141.83,target
+55512,Total Ridership ,2014,44890429.08,actual
+55512,Total Ridership ,2015,45718092.58,target
+55512,Total Ridership ,2015,45430539.67,actual
+55512,Total Ridership ,2016,46392772.75,target
+55512,Total Ridership ,2016,46100736.42,actual
+55512,Total Ridership ,2017,31949881,target
+55512,Total Ridership ,2017,31452621.88,actual
+55526,On-Time Performance (East of Hudson),2008,97.6,target
+55526,On-Time Performance (East of Hudson),2008,98.05833333,actual
+55526,On-Time Performance (East of Hudson),2009,97.6,target
+55526,On-Time Performance (East of Hudson),2009,97.55833333,actual
+55526,On-Time Performance (East of Hudson),2010,97.7,target
+55526,On-Time Performance (East of Hudson),2010,97.95833333,actual
+55526,On-Time Performance (East of Hudson),2011,97.8,target
+55526,On-Time Performance (East of Hudson),2011,96.08333333,actual
+55526,On-Time Performance (East of Hudson),2012,97.8,target
+55526,On-Time Performance (East of Hudson),2012,98.15,actual
+55526,On-Time Performance (East of Hudson),2013,97.8,target
+55526,On-Time Performance (East of Hudson),2013,96.35833333,actual
+55526,On-Time Performance (East of Hudson),2014,93,target
+55526,On-Time Performance (East of Hudson),2014,90.725,actual
+55526,On-Time Performance (East of Hudson),2015,93,target
+55526,On-Time Performance (East of Hudson),2015,92.275,actual
+55526,On-Time Performance (East of Hudson),2016,93,target
+55526,On-Time Performance (East of Hudson),2016,94.21666667,actual
+55526,On-Time Performance (East of Hudson),2017,93,target
+55526,On-Time Performance (East of Hudson),2017,95.02222222,actual
+373885,Elevator Availability,2009,0,target
+373885,Elevator Availability,2009,98.85,actual
+373885,Elevator Availability,2010,97,target
+373885,Elevator Availability,2010,98.7,actual
+373885,Elevator Availability,2011,97,target
+373885,Elevator Availability,2011,99.40833333,actual
+373885,Elevator Availability,2012,97,target
+373885,Elevator Availability,2012,99.00583333,actual
+373885,Elevator Availability,2013,97,target
+373885,Elevator Availability,2013,98.15166667,actual
+373885,Elevator Availability,2014,98,target
+373885,Elevator Availability,2014,98.5875,actual
+373885,Elevator Availability,2015,98,target
+373885,Elevator Availability,2015,99.0675,actual
+373885,Elevator Availability,2016,98,target
+373885,Elevator Availability,2016,99.58083333,actual
+373885,Elevator Availability,2017,98,target
+373885,Elevator Availability,2017,99.00375,actual
+373889,Escalator Availability,2009,0,target
+373889,Escalator Availability,2009,94.68083333,actual
+373889,Escalator Availability,2010,97,target
+373889,Escalator Availability,2010,98.3925,actual
+373889,Escalator Availability,2011,97,target
+373889,Escalator Availability,2011,95.44916667,actual
+373889,Escalator Availability,2012,90,target
+373889,Escalator Availability,2012,94.7275,actual
+373889,Escalator Availability,2013,90,target
+373889,Escalator Availability,2013,85.79166667,actual
+373889,Escalator Availability,2014,93,target
+373889,Escalator Availability,2014,96.945,actual
+373889,Escalator Availability,2015,97,target
+373889,Escalator Availability,2015,98.41083333,actual
+373889,Escalator Availability,2016,97,target
+373889,Escalator Availability,2016,96.9675,actual
+373889,Escalator Availability,2017,97,target
+373889,Escalator Availability,2017,96.82125,actual
