@@ -41,7 +41,7 @@ New York City is one of the most populated cities in the world, and has one of t
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 bustripdata <- read.csv("bustrip.csv")
 bustripdata %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -99,7 +99,7 @@ knitr::kable(hudson)
 
 Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrrh <- read.csv("mnrrh.csv")
 mnrrh %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -129,7 +129,7 @@ pjl <-
 knitr::kable(pjl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -166,7 +166,7 @@ nhl <-
 knitr::kable(nhl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 nhl <-
   mnrr %>%
@@ -202,7 +202,7 @@ hl <-
 knitr::kable(hl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 hl <-
   mnrr %>%
@@ -238,7 +238,7 @@ pvl <-
 knitr::kable(pvl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 pvl <-
   mnrr %>%
@@ -259,7 +259,7 @@ pvl %>%
 
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -276,7 +276,7 @@ mnrra %>%
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
