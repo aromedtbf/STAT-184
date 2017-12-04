@@ -44,7 +44,8 @@ bustripdata %>%
   stat_smooth() +
   geom_point() + 
   xlab("Year") + 
-  ylab("% of Completed Trips")
+  ylab("% of Completed Trips") +
+  ggtitle("Complteted trips for the New York City Bus")
 ```
   
 Below is the data used for the graph above, which explains the completed trip percentage per year. The type shows the difference between the actual and target (predicted) data gathered for NYCT Bus.
@@ -84,7 +85,8 @@ mnrrh %>%
   stat_smooth() +
   geom_point() + 
   xlab("Year") + 
-  ylab("% of on time arrivals")
+  ylab("% of on time arrivals") +
+  ggtitle("Arrival Times for the Hudson Line")
 ```
 
 Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph
@@ -113,7 +115,8 @@ pjl %>%
   stat_smooth() +
   geom_point() + 
   xlab("Year") + 
-  ylab("% of on time arrivals")
+  ylab("% of on time arrivals") +
+  ggtitle("Arrival Times for the Port Jervis Line")
 ```
 
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
