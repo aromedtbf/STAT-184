@@ -18,8 +18,10 @@ library(ggplot2)
 library(gtfsr)
 library(magrittr)
 library(dplyr)
-require(mosaicData)
+require(DataComputing)
 require(mosaic)
+require(mosaicData)
+require(dplyr)
 require(ggplot2)
 require(gtfsr)
 require(magrittr)
@@ -110,9 +112,9 @@ mnrrh %>%
 
 ### Port Jervis Line 
 
-Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph
+Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph.
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
@@ -127,7 +129,7 @@ pjl <-
 knitr::kable(pjl)
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -144,9 +146,120 @@ pjl %>%
   ggtitle("Arrival Times for the Port Jervis Line")
 ```
 
+
+### New Haven Line
+
+Below is the New Haven line, where we will analyse the data on the percentage that the trains arrive on time along with its graph.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+nhl  <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ==28347)
+nhl <-
+  nhl %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(nhl)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("mnrr.csv")
+nhl <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28347)
+nhl <-
+  nhl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
+nhl %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals") +
+  ggtitle("Arrival Times for the New Haven Line")
+```
+
+### Harlem Line
+
+Below is the Harlem line, where we will analyse the data on the percentage that the trains arrive on time along with its graph.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+hl  <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ==28346)
+hl <-
+  hl %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(hl)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("mnrr.csv")
+hl <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28346)
+hl <-
+  hl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
+hl %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals") +
+  ggtitle("Arrival Times for the Harlem Line")
+```
+
+### Pascack Valley Line
+
+Below is the Pascack Valley line, where we will analyse the data on the percentage that the trains arrive on time along with its graph.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+pvl  <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ==28461)
+pvl <-
+  pvl %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(pvl)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("mnrr.csv")
+pvl <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28461)
+pvl <-
+  pvl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
+pvl %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals") +
+  ggtitle("Arrival Times for the Pascack Valley Line")
+```
+
+### MNRR Trunk Lines
+
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -163,7 +276,7 @@ mnrra %>%
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
