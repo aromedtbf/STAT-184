@@ -35,9 +35,9 @@ In order to use this data, I had to apply through its website in order to obtain
 
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well.
 
-Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
+## New York City Bus
 
-### New York City Bus
+Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 bustripdata <- read.csv("bustrip.csv")
@@ -57,7 +57,7 @@ bustripdata <- read.csv("bustrip.csv")
 knitr::kable(bustripdata)
 ```
 
-### Metro North Railroad
+## Metro North Railroad
 
 This is the Metro North Railroad with multiple indicator types, and I will focus on the MNRR Hudson Harlem and Port Jervis Lines.
 
@@ -65,18 +65,33 @@ This is the Metro North Railroad with multiple indicator types, and I will focus
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
-  select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mnrr1 <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
 mnrr1 <-
-  mnrr %>%
+  mnrr1 %>%
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
 knitr::kable(mnrr1)
 ```
 
+### Hudson Line
+
 Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-hudson <- read.csv("mnrrh.csv")
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+hudson  <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ==28345)
+hudson <-
+  hudson %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
 knitr::kable(hudson)
 ```
 
@@ -93,16 +108,22 @@ mnrrh %>%
   ggtitle("Arrival Times for the Hudson Line")
 ```
 
+### Port Jervis Line 
+
 Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph
 
 ```{r, echo=FALSE, message=FALSE}
-mnrr <- read.csv("mnrr.csv")
-pjl <-
-  mnrr %>%
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+pjl  <- 
+  mnrr %>% 
   filter(INDICATOR_SEQ==28460)
 pjl <-
   pjl %>%
-  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
 knitr::kable(pjl)
 ```
 
@@ -158,5 +179,4 @@ mnrrt %>%
   ylab("% of on time arrivals") +
   ggtitle("Target Arrival Times for Each Trunk Line")
 ```
-
 
