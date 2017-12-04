@@ -54,15 +54,18 @@ bustripdata <- read.csv("bustrip.csv")
 knitr::kable(bustripdata)
 ```
 
-Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
+This is the Metro North Railroad with multiple indicator types, and I will focus on the MNRR Hudson Harlem and Port Jervis Lines.
 
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-hudson <- 
-  mnrr %>% 
-  filter(INDICATOR_SEQ == 28345)
-hudson <- 
-  hudson %>%
+mnrr %>%
   select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+knitr::kable(mnrr)
+```
+
+Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
+
+```{r}
+hudson <- read.csv("mnrrhudson.csv")
 knitr::kable(hudson)
 ```
