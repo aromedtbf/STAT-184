@@ -2,7 +2,7 @@ The Metropolitan Transportation Authority of New York City
 ================
 Anthony Josue Roman
 
-*Source file* <a href='data:text/x-markdown;base64,LS0tCnRpdGxlOiAiVGhlIE1ldHJvcG9saXRhbiBUcmFuc3BvcnRhdGlvbiBBdXRob3JpdHkgb2YgTmV3IFlvcmsgQ2l0eSIKYXV0aG9yOiBBbnRob255IEpvc3VlIFJvbWFuCm91dHB1dDogZ2l0aHViX2RvY3VtZW50Ci0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpgYGB7ciBpbmNsdWRlPUZBTFNFfQojIERvbid0IGRlbGV0ZSB0aGlzIGNodW5rIGlmIHlvdSBhcmUgdXNpbmcgdGhlIERhdGFDb21wdXRpbmcgcGFja2FnZQpsaWJyYXJ5KERhdGFDb21wdXRpbmcpCmxpYnJhcnkobW9zYWljKQpsaWJyYXJ5KG1vc2FpY0RhdGEpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoZ2dwbG90MikKbGlicmFyeShndGZzcikKbGlicmFyeShtYWdyaXR0cikKbGlicmFyeShkcGx5cikKcmVxdWlyZShtb3NhaWNEYXRhKQpyZXF1aXJlKG1vc2FpYykKcmVxdWlyZShnZ3Bsb3QyKQpyZXF1aXJlKGd0ZnNyKQpyZXF1aXJlKG1hZ3JpdHRyKQpyZXF1aXJlKGRwbHlyKQpgYGAKKlNvdXJjZSBmaWxlKiAKYGBge3IsIHJlc3VsdHM9J2FzaXMnLCBlY2hvPUZBTFNFfQppbmNsdWRlU291cmNlRG9jdW1lbnRzKCkKYGBgCgpJIHdpbGwgYmVnaW4gYW5hbHlzaW5nIHRoZSBkYXRhIHByb3ZpZGVkIGZyb20gTmV3IFlvcmsgQ2l0eSdzIHRyYW5zcG9ydGF0aW9uIGF1dGhvcml0eSwgYWxzbyBrbm93biBhcyB0aGUgTVRBLiBUaGUgZm9sbG93aW5nIGRhdGEgdXNlZCB3aWxsIGluY2x1ZGUgc3VjY2VzcyBhbmQgZmFpbHVyZSByYXRlcyBmb3IgZWFjaCBkZXBhcnRtZW50LiAgCkluIG9yZGVyIHRvIHVzZSB0aGlzIGRhdGEsIEkgaGFkIHRvIGFwcGx5IHRocm91Z2ggaXRzIHdlYnNpdGUgaW4gb3JkZXIgdG8gb2J0YWluIHRoaXMgZGF0YS4gVGhlIGdpdmVuIGRhdGEgd2lsbCBiZSBwcm92aWRlZCBhbG9uZyB3aXRoIHRoaXMgZmlsZSwgYW5kIGluIHRoZSB3ZWJzaXRlLiBJbiBvcmRlciB0byBtYWtlIHRoaXMgZGF0YSBlYXNpZXIgdG8gcmVhZCwgdGhlcmUgd2VyZSBjc3YgZmlsZXMgY3JlYXRlZCBpbiBvcmRlciB0byB5aWVsZCBhIHZpYWJsZSBncmFwaCBhbmQgZm9yIGRhdGEgd3JhbmdsaW5nIHB1cnBvc2VzLgoKTmV3IFlvcmsgQ2l0eSBpcyBvbmUgb2YgdGhlIG1vc3QgcG9wdWxhdGVkIGNpdGllcyBpbiB0aGUgd29ybGQsIGFuZCBoYXMgb25lIG9mIHRoZSBsYXJnZXN0IHB1YmxpYyB0cmFuc3BvcnRhdGlvbiBzeXN0ZW1zIGluIHRoZSB3b3JsZCBhcyB3ZWxsLgoKQmVsb3cgaXMgYSBjb21wYXJpc29uIGJldHdlZW4gdGhlIENvbXBsZXRlZCBhbmQgcHJvamVjdGVkIFRyaXBzIGZyb20gTVRBIEJ1cyBhbmQgTVRBIE5ldyBZb3JrIENpdHkgQnVzLiBOb3RlOiBPbiAyMDEyLCBIdXJyaWNhbmUgU2FuZHkgZGlkIGFmZmVjdCBzZXJ2aWNlLCBhbG9uZyB3aXRoIG90aGVyIHllYXJzIGR1ZSB0byBzdXNwZW5zaW9uIG9mIHNlcnZpY2UuCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpidXN0cmlwZGF0YSA8LSByZWFkLmNzdigiYnVzdHJpcC5jc3YiKQpidXN0cmlwZGF0YSAlPiUgCiAgZ2dwbG90KGFlcyh4PVBFUklPRF9ZRUFSLHk9Y291bnQsY29sb3I9dHlwZSkpICsKICBzdGF0X3Ntb290aCgpICsKICBnZW9tX3BvaW50KCkgKyAKICB4bGFiKCJZZWFyIikgKyAKICB5bGFiKCIlIG9mIENvbXBsZXRlZCBUcmlwcyIpCmBgYAogIApCZWxvdyBpcyB0aGUgZGF0YSB1c2VkIGZvciB0aGUgZ3JhcGggYWJvdmUsIHdoaWNoIGV4cGxhaW5zIHRoZSBjb21wbGV0ZWQgdHJpcCBwZXJjZW50YWdlIHBlciB5ZWFyLiBUaGUgdHlwZSBzaG93cyB0aGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoZSBhY3R1YWwgYW5kIHRhcmdldCAocHJlZGljdGVkKSBkYXRhIGdhdGhlcmVkIGZvciBOWUNUIEJ1cy4KCmBgYHtyLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpidXN0cmlwZGF0YSA8LSByZWFkLmNzdigiYnVzdHJpcC5jc3YiKQprbml0cjo6a2FibGUoYnVzdHJpcGRhdGEpCmBgYAoKVGhpcyBpcyB0aGUgTWV0cm8gTm9ydGggUmFpbHJvYWQgd2l0aCBtdWx0aXBsZSBpbmRpY2F0b3IgdHlwZXMsIGFuZCBJIHdpbGwgZm9jdXMgb24gdGhlIE1OUlIgSHVkc29uIEhhcmxlbSBhbmQgUG9ydCBKZXJ2aXMgTGluZXMuCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQptbnJyIDwtIHJlYWQuY3N2KCJNVEFfUGVyZm9ybWFuY2VfTU5SLmNzdiIpCm1ucnIgPC0gCiAgbW5yciAlPiUgCiAgc2VsZWN0KElORElDQVRPUl9OQU1FLFBFUklPRF9ZRUFSLFlURF9UQVJHRVQsWVREX0FDVFVBTCkKbW5ycjEgPC0KICBtbnJyICU+JQogIGdyb3VwX2J5KElORElDQVRPUl9OQU1FLFBFUklPRF9ZRUFSKSAlPiUKICBzdW1tYXJpc2UoYXZndGFyZ2V0PW1lYW4oWVREX1RBUkdFVCksYXZnYWN0dWFsPW1lYW4oWVREX0FDVFVBTCkpCmtuaXRyOjprYWJsZShtbnJyMSkKYGBgCgpCZWxvdyBpcyB0aGUgTWV0cm8gTm9ydGggSHVkc29uIGxpbmUsIHdoZXJlIHdlIHdpbGwgYW5hbHlzZSB0aGUgZGF0YSBvbiB0aGUgcGVyY2VudGFnZSB0aGF0IHRoZSB0cmFpbnMgYXJyaXZlIG9uIHRpbWUuCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpodWRzb24gPC0gcmVhZC5jc3YoIm1ucnJoLmNzdiIpCmtuaXRyOjprYWJsZShodWRzb24pCmBgYAoKQmVsb3cgaXMgdGhlIGRhdGEgdXNlZCBmb3IgdGhlIGdyYXBoIGFib3ZlLCB3aGljaCBleHBsYWlucyB0aGUgcGVyY2VudGFnZSB0aGF0IHRoZSB0cmFpbnMgYXJyaXZlIG9uIHRpbWUgcGVyIHllYXIuIFRoZSB0eXBlIHNob3dzIHRoZSBkaWZmZXJlbmNlIGJldHdlZW4gdGhlIGFjdHVhbCBhbmQgdGFyZ2V0IChwcmVkaWN0ZWQpIGRhdGEgZ2F0aGVyZWQgZm9yIHRoZSBNTlJSIEh1ZHNvbiBMaW5lLgoKYGBge3IsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0V9Cm1ucnJoIDwtIHJlYWQuY3N2KCJtbnJyaC5jc3YiKQptbnJyaCAlPiUgCiAgZ2dwbG90KGFlcyh4PVBFUklPRF9ZRUFSLHk9Y291bnQsY29sb3I9dHlwZSkpICsKICBzdGF0X3Ntb290aCgpICsKICBnZW9tX3BvaW50KCkgKyAKICB4bGFiKCJZZWFyIikgKyAKICB5bGFiKCIlIG9mIG9uIHRpbWUgYXJyaXZhbHMiKQpgYGAKCkJlbG93IGlzIHRoZSBQb3J0IEplcnZpcyBsaW5lLCB3aGVyZSB3ZSB3aWxsIGFuYWx5c2UgdGhlIGRhdGEgb24gdGhlIHBlcmNlbnRhZ2UgdGhhdCB0aGUgdHJhaW5zIGFycml2ZSBvbiB0aW1lIGFsb25nIHdpdGggaXRzIGdyYXBoCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFfQptbnJyIDwtIHJlYWQuY3N2KCJtbnJyLmNzdiIpCnBqbCA8LQogIG1ucnIgJT4lCiAgZmlsdGVyKElORElDQVRPUl9TRVE9PTI4NDYwKQprbml0cjo6a2FibGUocGpsKQpwamwgJT4lIAogIGdncGxvdChhZXMoeD1QRVJJT0RfWUVBUix5PWNvdW50LGNvbG9yPXR5cGUpKSArCiAgc3RhdF9zbW9vdGgoKSArCiAgZ2VvbV9wb2ludCgpICsgCiAgeGxhYigiWWVhciIpICsgCiAgeWxhYigiJSBvZiBvbiB0aW1lIGFycml2YWxzIikKYGBgCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFfQptbnJyIDwtIHJlYWQuY3N2KCJtbnJyLmNzdiIpCnBqbCA8LQogIG1ucnIgJT4lCiAgZmlsdGVyKElORElDQVRPUl9TRVE9PTI4NDYwKQpwamwgJT4lIAogIGdncGxvdChhZXMoeD1QRVJJT0RfWUVBUix5PWNvdW50LGNvbG9yPXR5cGUpKSArCiAgc3RhdF9zbW9vdGgoKSArCiAgZ2VvbV9wb2ludCgpICsgCiAgeGxhYigiWWVhciIpICsgCiAgeWxhYigiJSBvZiBvbiB0aW1lIGFycml2YWxzIikKYGBgCgpCZWxvdyBzaG93cyB0aGUgY29tcGFyaXNvbnMgYmV0d2VlbiBhbGwgdGhlIE1OUlIgdHJ1bmsgbGluZXMsIHdpdGggZWFjaCBpbmRpY2F0b3IgbmFtZSBiZWluZyB0aGUgbmFtZSBvZiB0aGUgTU5SUiB0cnVuayBsaW5lLgoKYGBge3IsIGVjaG89VFJVRSwgbWVzc2FnZT1GQUxTRX0KbW5yciA8LSByZWFkLmNzdigibW5yci5jc3YiKQptbnJyMSA8LSAKICBtbnJyICU+JSAKICBmaWx0ZXIoSU5ESUNBVE9SX1NFUSAlaW4lIGMoMjgzNDYsMjgzNDUsMjgzNDcsMjg0NjEsMjg0NjApKQptbnJyYSA8LQogIG1ucnIxICU+JQogIGZpbHRlcih0eXBlID09ICJhY3R1YWwiKQptbnJyYSAlPiUgCiAgZ2dwbG90KGFlcyh4PVBFUklPRF9ZRUFSLHk9Y291bnQsY29sb3I9SU5ESUNBVE9SX05BTUUpKSArCiAgc3RhdF9zbW9vdGgoKSArCiAgZ2VvbV9wb2ludCgpICsgCiAgeGxhYigiWWVhciIpICsgCiAgeWxhYigiJSBvZiBvbiB0aW1lIGFycml2YWxzIikgKwogIGdndGl0bGUoIkFjdHVhbCBBcnJpdmFsIFRpbWVzIGZvciBFYWNoIFRydW5rIExpbmUiKQpgYGA=' target='_blank' title='User  at /Users/Anthony' download='README.Rmd'> ⇒ README.Rmd</a>
+*Source file* <a href='data:text/x-markdown;base64,LS0tCnRpdGxlOiAiVGhlIE1ldHJvcG9saXRhbiBUcmFuc3BvcnRhdGlvbiBBdXRob3JpdHkgb2YgTmV3IFlvcmsgQ2l0eSIKYXV0aG9yOiBBbnRob255IEpvc3VlIFJvbWFuCm91dHB1dDogZ2l0aHViX2RvY3VtZW50Ci0tLQoKYGBge3Igc2V0dXAsIGluY2x1ZGU9RkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkKYGBgCgpgYGB7ciBpbmNsdWRlPUZBTFNFfQojIERvbid0IGRlbGV0ZSB0aGlzIGNodW5rIGlmIHlvdSBhcmUgdXNpbmcgdGhlIERhdGFDb21wdXRpbmcgcGFja2FnZQpsaWJyYXJ5KERhdGFDb21wdXRpbmcpCmxpYnJhcnkobW9zYWljKQpsaWJyYXJ5KG1vc2FpY0RhdGEpCmxpYnJhcnkoZHBseXIpCmxpYnJhcnkoZ2dwbG90MikKbGlicmFyeShndGZzcikKbGlicmFyeShtYWdyaXR0cikKbGlicmFyeShkcGx5cikKcmVxdWlyZShtb3NhaWNEYXRhKQpyZXF1aXJlKG1vc2FpYykKcmVxdWlyZShnZ3Bsb3QyKQpyZXF1aXJlKGd0ZnNyKQpyZXF1aXJlKG1hZ3JpdHRyKQpyZXF1aXJlKGRwbHlyKQpgYGAKKlNvdXJjZSBmaWxlKiAKYGBge3IsIHJlc3VsdHM9J2FzaXMnLCBlY2hvPUZBTFNFfQppbmNsdWRlU291cmNlRG9jdW1lbnRzKCkKYGBgCgpJIHdpbGwgYmVnaW4gYW5hbHlzaW5nIHRoZSBkYXRhIHByb3ZpZGVkIGZyb20gTmV3IFlvcmsgQ2l0eSdzIHRyYW5zcG9ydGF0aW9uIGF1dGhvcml0eSwgYWxzbyBrbm93biBhcyB0aGUgTVRBLiBUaGUgZm9sbG93aW5nIGRhdGEgdXNlZCB3aWxsIGluY2x1ZGUgc3VjY2VzcyBhbmQgZmFpbHVyZSByYXRlcyBmb3IgZWFjaCBkZXBhcnRtZW50LiAgCkluIG9yZGVyIHRvIHVzZSB0aGlzIGRhdGEsIEkgaGFkIHRvIGFwcGx5IHRocm91Z2ggaXRzIHdlYnNpdGUgaW4gb3JkZXIgdG8gb2J0YWluIHRoaXMgZGF0YS4gVGhlIGdpdmVuIGRhdGEgd2lsbCBiZSBwcm92aWRlZCBhbG9uZyB3aXRoIHRoaXMgZmlsZSwgYW5kIGluIHRoZSB3ZWJzaXRlLiBJbiBvcmRlciB0byBtYWtlIHRoaXMgZGF0YSBlYXNpZXIgdG8gcmVhZCwgdGhlcmUgd2VyZSBjc3YgZmlsZXMgY3JlYXRlZCBpbiBvcmRlciB0byB5aWVsZCBhIHZpYWJsZSBncmFwaCBhbmQgZm9yIGRhdGEgd3JhbmdsaW5nIHB1cnBvc2VzLgoKTmV3IFlvcmsgQ2l0eSBpcyBvbmUgb2YgdGhlIG1vc3QgcG9wdWxhdGVkIGNpdGllcyBpbiB0aGUgd29ybGQsIGFuZCBoYXMgb25lIG9mIHRoZSBsYXJnZXN0IHB1YmxpYyB0cmFuc3BvcnRhdGlvbiBzeXN0ZW1zIGluIHRoZSB3b3JsZCBhcyB3ZWxsLgoKQmVsb3cgaXMgYSBjb21wYXJpc29uIGJldHdlZW4gdGhlIENvbXBsZXRlZCBhbmQgcHJvamVjdGVkIFRyaXBzIGZyb20gTVRBIEJ1cyBhbmQgTVRBIE5ldyBZb3JrIENpdHkgQnVzLiBOb3RlOiBPbiAyMDEyLCBIdXJyaWNhbmUgU2FuZHkgZGlkIGFmZmVjdCBzZXJ2aWNlLCBhbG9uZyB3aXRoIG90aGVyIHllYXJzIGR1ZSB0byBzdXNwZW5zaW9uIG9mIHNlcnZpY2UuCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpidXN0cmlwZGF0YSA8LSByZWFkLmNzdigiYnVzdHJpcC5jc3YiKQpidXN0cmlwZGF0YSAlPiUgCiAgZ2dwbG90KGFlcyh4PVBFUklPRF9ZRUFSLHk9Y291bnQsY29sb3I9dHlwZSkpICsKICBzdGF0X3Ntb290aCgpICsKICBnZW9tX3BvaW50KCkgKyAKICB4bGFiKCJZZWFyIikgKyAKICB5bGFiKCIlIG9mIENvbXBsZXRlZCBUcmlwcyIpCmBgYAogIApCZWxvdyBpcyB0aGUgZGF0YSB1c2VkIGZvciB0aGUgZ3JhcGggYWJvdmUsIHdoaWNoIGV4cGxhaW5zIHRoZSBjb21wbGV0ZWQgdHJpcCBwZXJjZW50YWdlIHBlciB5ZWFyLiBUaGUgdHlwZSBzaG93cyB0aGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoZSBhY3R1YWwgYW5kIHRhcmdldCAocHJlZGljdGVkKSBkYXRhIGdhdGhlcmVkIGZvciBOWUNUIEJ1cy4KCmBgYHtyLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpidXN0cmlwZGF0YSA8LSByZWFkLmNzdigiYnVzdHJpcC5jc3YiKQprbml0cjo6a2FibGUoYnVzdHJpcGRhdGEpCmBgYAoKVGhpcyBpcyB0aGUgTWV0cm8gTm9ydGggUmFpbHJvYWQgd2l0aCBtdWx0aXBsZSBpbmRpY2F0b3IgdHlwZXMsIGFuZCBJIHdpbGwgZm9jdXMgb24gdGhlIE1OUlIgSHVkc29uIEhhcmxlbSBhbmQgUG9ydCBKZXJ2aXMgTGluZXMuCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQptbnJyIDwtIHJlYWQuY3N2KCJNVEFfUGVyZm9ybWFuY2VfTU5SLmNzdiIpCm1ucnIgPC0gCiAgbW5yciAlPiUgCiAgc2VsZWN0KElORElDQVRPUl9OQU1FLFBFUklPRF9ZRUFSLFlURF9UQVJHRVQsWVREX0FDVFVBTCkKbW5ycjEgPC0KICBtbnJyICU+JQogIGdyb3VwX2J5KElORElDQVRPUl9OQU1FLFBFUklPRF9ZRUFSKSAlPiUKICBzdW1tYXJpc2UoYXZndGFyZ2V0PW1lYW4oWVREX1RBUkdFVCksYXZnYWN0dWFsPW1lYW4oWVREX0FDVFVBTCkpCmtuaXRyOjprYWJsZShtbnJyMSkKYGBgCgpCZWxvdyBpcyB0aGUgTWV0cm8gTm9ydGggSHVkc29uIGxpbmUsIHdoZXJlIHdlIHdpbGwgYW5hbHlzZSB0aGUgZGF0YSBvbiB0aGUgcGVyY2VudGFnZSB0aGF0IHRoZSB0cmFpbnMgYXJyaXZlIG9uIHRpbWUuCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFLCB3YXJuaW5nPUZBTFNFfQpodWRzb24gPC0gcmVhZC5jc3YoIm1ucnJoLmNzdiIpCmtuaXRyOjprYWJsZShodWRzb24pCmBgYAoKQmVsb3cgaXMgdGhlIGRhdGEgdXNlZCBmb3IgdGhlIGdyYXBoIGFib3ZlLCB3aGljaCBleHBsYWlucyB0aGUgcGVyY2VudGFnZSB0aGF0IHRoZSB0cmFpbnMgYXJyaXZlIG9uIHRpbWUgcGVyIHllYXIuIFRoZSB0eXBlIHNob3dzIHRoZSBkaWZmZXJlbmNlIGJldHdlZW4gdGhlIGFjdHVhbCBhbmQgdGFyZ2V0IChwcmVkaWN0ZWQpIGRhdGEgZ2F0aGVyZWQgZm9yIHRoZSBNTlJSIEh1ZHNvbiBMaW5lLgoKYGBge3IsIG1lc3NhZ2U9RkFMU0UsIHdhcm5pbmc9RkFMU0V9Cm1ucnJoIDwtIHJlYWQuY3N2KCJtbnJyaC5jc3YiKQptbnJyaCAlPiUgCiAgZ2dwbG90KGFlcyh4PVBFUklPRF9ZRUFSLHk9Y291bnQsY29sb3I9dHlwZSkpICsKICBzdGF0X3Ntb290aCgpICsKICBnZW9tX3BvaW50KCkgKyAKICB4bGFiKCJZZWFyIikgKyAKICB5bGFiKCIlIG9mIG9uIHRpbWUgYXJyaXZhbHMiKQpgYGAKCkJlbG93IGlzIHRoZSBQb3J0IEplcnZpcyBsaW5lLCB3aGVyZSB3ZSB3aWxsIGFuYWx5c2UgdGhlIGRhdGEgb24gdGhlIHBlcmNlbnRhZ2UgdGhhdCB0aGUgdHJhaW5zIGFycml2ZSBvbiB0aW1lIGFsb25nIHdpdGggaXRzIGdyYXBoCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFfQptbnJyIDwtIHJlYWQuY3N2KCJtbnJyLmNzdiIpCnBqbCA8LQogIG1ucnIgJT4lCiAgZmlsdGVyKElORElDQVRPUl9TRVE9PTI4NDYwKQpwamwgPC0KICBwamwgJT4lCiAgc2VsZWN0KElORElDQVRPUl9OQU1FLFBFUklPRF9ZRUFSLGNvdW50LHR5cGUpCmtuaXRyOjprYWJsZShwamwpCmBgYAoKYGBge3IsIGVjaG89VFJVRSwgbWVzc2FnZT1GQUxTRX0KbW5yciA8LSByZWFkLmNzdigibW5yci5jc3YiKQpwamwgPC0KICBtbnJyICU+JQogIGZpbHRlcihJTkRJQ0FUT1JfU0VRPT0yODQ2MCkKcGpsIDwtCiAgcGpsICU+JQogIHNlbGVjdChJTkRJQ0FUT1JfTkFNRSxQRVJJT0RfWUVBUixjb3VudCx0eXBlKQpwamwgJT4lIAogIGdncGxvdChhZXMoeD1QRVJJT0RfWUVBUix5PWNvdW50LGNvbG9yPXR5cGUpKSArCiAgc3RhdF9zbW9vdGgoKSArCiAgZ2VvbV9wb2ludCgpICsgCiAgeGxhYigiWWVhciIpICsgCiAgeWxhYigiJSBvZiBvbiB0aW1lIGFycml2YWxzIikKYGBgCgpCZWxvdyBzaG93cyB0aGUgY29tcGFyaXNvbnMgYmV0d2VlbiBhbGwgdGhlIE1OUlIgdHJ1bmsgbGluZSBhY3R1YWwgYW5kIHRhcmdldCBhcnJpdmFsIHRpbWVzLCB3aXRoIGVhY2ggaW5kaWNhdG9yIG5hbWUgYmVpbmcgdGhlIG5hbWUgb2YgdGhlIE1OUlIgdHJ1bmsgbGluZS4KCmBgYHtyLCBlY2hvPVRSVUUsIG1lc3NhZ2U9RkFMU0V9Cm1ucnIgPC0gcmVhZC5jc3YoIm1ucnIuY3N2IikKbW5ycjEgPC0gCiAgbW5yciAlPiUgCiAgZmlsdGVyKElORElDQVRPUl9TRVEgJWluJSBjKDI4MzQ2LDI4MzQ1LDI4MzQ3LDI4NDYxLDI4NDYwKSkKbW5ycmEgPC0KICBtbnJyMSAlPiUKICBmaWx0ZXIodHlwZSA9PSAiYWN0dWFsIikKbW5ycmEgJT4lIAogIGdncGxvdChhZXMoeD1QRVJJT0RfWUVBUix5PWNvdW50LGNvbG9yPUlORElDQVRPUl9OQU1FKSkgKwogIHN0YXRfc21vb3RoKCkgKwogIGdlb21fcG9pbnQoKSArIAogIHhsYWIoIlllYXIiKSArIAogIHlsYWIoIiUgb2Ygb24gdGltZSBhcnJpdmFscyIpICsKICBnZ3RpdGxlKCJBY3R1YWwgQXJyaXZhbCBUaW1lcyBmb3IgRWFjaCBUcnVuayBMaW5lIikKYGBgCgpgYGB7ciwgZWNobz1UUlVFLCBtZXNzYWdlPUZBTFNFfQptbnJyIDwtIHJlYWQuY3N2KCJtbnJyLmNzdiIpCm1ucnIxIDwtIAogIG1ucnIgJT4lIAogIGZpbHRlcihJTkRJQ0FUT1JfU0VRICVpbiUgYygyODM0NiwyODM0NSwyODM0NywyODQ2MSwyODQ2MCkpCm1ucnJ0IDwtCiAgbW5ycjEgJT4lCiAgZmlsdGVyKHR5cGUgPT0gInRhcmdldCIpCm1ucnJ0ICU+JSAKICBnZ3Bsb3QoYWVzKHg9UEVSSU9EX1lFQVIseT1jb3VudCxjb2xvcj1JTkRJQ0FUT1JfTkFNRSkpICsKICBzdGF0X3Ntb290aCgpICsKICBnZW9tX3BvaW50KCkgKyAKICB4bGFiKCJZZWFyIikgKyAKICB5bGFiKCIlIG9mIG9uIHRpbWUgYXJyaXZhbHMiKSArCiAgZ2d0aXRsZSgiVGFyZ2V0IEFycml2YWwgVGltZXMgZm9yIEVhY2ggVHJ1bmsgTGluZSIpCmBgYA==' target='_blank' title='User  at /Users/Anthony' download='README.Rmd'> ⇒ README.Rmd</a>
 
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.
 In order to use this data, I had to apply through its website in order to obtain this data. The given data will be provided along with this file, and in the website. In order to make this data easier to read, there were csv files created in order to yield a viable graph and for data wrangling purposes.
@@ -249,48 +249,43 @@ mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
   filter(INDICATOR_SEQ==28460)
+pjl <-
+  pjl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 knitr::kable(pjl)
 ```
 
-|  INDICATOR\_SEQ| INDICATOR\_NAME        |  PERIOD\_YEAR|     count| type   |
-|---------------:|:-----------------------|-------------:|---------:|:-------|
-|           28460| Port Jervis Line - OTP |          2008|  94.40000| target |
-|           28460| Port Jervis Line - OTP |          2008|  95.40833| actual |
-|           28460| Port Jervis Line - OTP |          2009|  95.00000| target |
-|           28460| Port Jervis Line - OTP |          2009|  95.94167| actual |
-|           28460| Port Jervis Line - OTP |          2010|  95.20000| target |
-|           28460| Port Jervis Line - OTP |          2010|  95.08333| actual |
-|           28460| Port Jervis Line - OTP |          2011|  95.50000| target |
-|           28460| Port Jervis Line - OTP |          2011|  92.85000| actual |
-|           28460| Port Jervis Line - OTP |          2012|  95.50000| target |
-|           28460| Port Jervis Line - OTP |          2012|  96.13333| actual |
-|           28460| Port Jervis Line - OTP |          2013|  96.02500| target |
-|           28460| Port Jervis Line - OTP |          2013|  96.30833| actual |
-|           28460| Port Jervis Line - OTP |          2014|  96.20000| target |
-|           28460| Port Jervis Line - OTP |          2014|  93.45000| actual |
-|           28460| Port Jervis Line - OTP |          2015|  95.00000| target |
-|           28460| Port Jervis Line - OTP |          2015|  93.45000| actual |
-|           28460| Port Jervis Line - OTP |          2016|  95.00000| target |
-|           28460| Port Jervis Line - OTP |          2016|  95.87500| actual |
-|           28460| Port Jervis Line - OTP |          2017|  95.00000| target |
-|           28460| Port Jervis Line - OTP |          2017|  92.47778| actual |
-
-``` r
-pjl %>% 
-  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
-  geom_point() + 
-  xlab("Year") + 
-  ylab("% of on time arrivals")
-```
-
-![](README_files/figure-markdown_github/unnamed-chunk-8-1.png)
+| INDICATOR\_NAME        |  PERIOD\_YEAR|     count| type   |
+|:-----------------------|-------------:|---------:|:-------|
+| Port Jervis Line - OTP |          2008|  94.40000| target |
+| Port Jervis Line - OTP |          2008|  95.40833| actual |
+| Port Jervis Line - OTP |          2009|  95.00000| target |
+| Port Jervis Line - OTP |          2009|  95.94167| actual |
+| Port Jervis Line - OTP |          2010|  95.20000| target |
+| Port Jervis Line - OTP |          2010|  95.08333| actual |
+| Port Jervis Line - OTP |          2011|  95.50000| target |
+| Port Jervis Line - OTP |          2011|  92.85000| actual |
+| Port Jervis Line - OTP |          2012|  95.50000| target |
+| Port Jervis Line - OTP |          2012|  96.13333| actual |
+| Port Jervis Line - OTP |          2013|  96.02500| target |
+| Port Jervis Line - OTP |          2013|  96.30833| actual |
+| Port Jervis Line - OTP |          2014|  96.20000| target |
+| Port Jervis Line - OTP |          2014|  93.45000| actual |
+| Port Jervis Line - OTP |          2015|  95.00000| target |
+| Port Jervis Line - OTP |          2015|  93.45000| actual |
+| Port Jervis Line - OTP |          2016|  95.00000| target |
+| Port Jervis Line - OTP |          2016|  95.87500| actual |
+| Port Jervis Line - OTP |          2017|  95.00000| target |
+| Port Jervis Line - OTP |          2017|  92.47778| actual |
 
 ``` r
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
   filter(INDICATOR_SEQ==28460)
+pjl <-
+  pjl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 pjl %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth() +
@@ -301,7 +296,7 @@ pjl %>%
 
 ![](README_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
-Below shows the comparisons between all the MNRR trunk lines, with each indicator name being the name of the MNRR trunk line.
+Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
 ``` r
 mnrr <- read.csv("mnrr.csv")
@@ -321,3 +316,22 @@ mnrra %>%
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-10-1.png)
+
+``` r
+mnrr <- read.csv("mnrr.csv")
+mnrr1 <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
+mnrrt <-
+  mnrr1 %>%
+  filter(type == "target")
+mnrrt %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals") +
+  ggtitle("Target Arrival Times for Each Trunk Line")
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-11-1.png)

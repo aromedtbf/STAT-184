@@ -94,13 +94,10 @@ mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
   filter(INDICATOR_SEQ==28460)
+pjl <-
+  pjl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 knitr::kable(pjl)
-pjl %>% 
-  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
-  geom_point() + 
-  xlab("Year") + 
-  ylab("% of on time arrivals")
 ```
 
 ```{r, echo=TRUE, message=FALSE}
@@ -108,6 +105,9 @@ mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
   filter(INDICATOR_SEQ==28460)
+pjl <-
+  pjl %>%
+  select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 pjl %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth() +
@@ -116,7 +116,7 @@ pjl %>%
   ylab("% of on time arrivals")
 ```
 
-Below shows the comparisons between all the MNRR trunk lines, with each indicator name being the name of the MNRR trunk line.
+Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
 ```{r, echo=TRUE, message=FALSE}
 mnrr <- read.csv("mnrr.csv")
@@ -133,4 +133,21 @@ mnrra %>%
   xlab("Year") + 
   ylab("% of on time arrivals") +
   ggtitle("Actual Arrival Times for Each Trunk Line")
+```
+
+```{r, echo=TRUE, message=FALSE}
+mnrr <- read.csv("mnrr.csv")
+mnrr1 <- 
+  mnrr %>% 
+  filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
+mnrrt <-
+  mnrr1 %>%
+  filter(type == "target")
+mnrrt %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals") +
+  ggtitle("Target Arrival Times for Each Trunk Line")
 ```
