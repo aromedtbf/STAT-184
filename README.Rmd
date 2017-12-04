@@ -37,6 +37,8 @@ New York City is one of the most populated cities in the world, and has one of t
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
+### New York City Bus
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 bustripdata <- read.csv("bustrip.csv")
 bustripdata %>% 
@@ -54,6 +56,8 @@ Below is the data used for the graph above, which explains the completed trip pe
 bustripdata <- read.csv("bustrip.csv")
 knitr::kable(bustripdata)
 ```
+
+### Metro North Railroad
 
 This is the Metro North Railroad with multiple indicator types, and I will focus on the MNRR Hudson Harlem and Port Jervis Lines.
 
@@ -154,3 +158,5 @@ mnrrt %>%
   ylab("% of on time arrivals") +
   ggtitle("Target Arrival Times for Each Trunk Line")
 ```
+
+
