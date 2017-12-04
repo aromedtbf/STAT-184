@@ -37,7 +37,7 @@ New York City is one of the most populated cities in the world, and has one of t
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 bustripdata <- read.csv("bustrip.csv")
 bustripdata %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -49,14 +49,14 @@ bustripdata %>%
   
 Below is the data used for the graph above, which explains the completed trip percentage per year. The type shows the difference between the actual and target (predicted) data gathered for NYCT Bus.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 bustripdata <- read.csv("bustrip.csv")
 knitr::kable(bustripdata)
 ```
 
 This is the Metro North Railroad with multiple indicator types, and I will focus on the MNRR Hudson Harlem and Port Jervis Lines.
 
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
@@ -70,14 +70,14 @@ knitr::kable(mnrr1)
 
 Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
 
-```{r, echo=TRUE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 hudson <- read.csv("mnrrh.csv")
 knitr::kable(hudson)
 ```
 
 Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
 
-```{r, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrrh <- read.csv("mnrrh.csv")
 mnrrh %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -89,7 +89,7 @@ mnrrh %>%
 
 Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph
 
-```{r, echo=TRUE, message=FALSE}
+```{r, echo=FALSE, message=FALSE}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -100,7 +100,7 @@ pjl <-
 knitr::kable(pjl)
 ```
 
-```{r, echo=TRUE, message=FALSE}
+```{r, echo=FALSE, message=FALSE}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -118,7 +118,7 @@ pjl %>%
 
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
-```{r, echo=TRUE, message=FALSE}
+```{r, echo=FALSE, message=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -135,7 +135,7 @@ mnrra %>%
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
-```{r, echo=TRUE, message=FALSE}
+```{r, echo=FALSE, message=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
