@@ -58,14 +58,27 @@ This is the Metro North Railroad with multiple indicator types, and I will focus
 
 ```{r, echo=TRUE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr %>%
+mnrr <- 
+  mnrr %>% 
   select(INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
 knitr::kable(mnrr)
 ```
 
 Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
 
-```{r}
-hudson <- read.csv("mnrrhudson.csv")
+```{r, echo=TRUE, message=FALSE, warning=FALSE}
+hudson <- read.csv("mnrrh.csv")
 knitr::kable(hudson)
+```
+
+Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
+
+```{r, message=FALSE, warning=FALSE}
+bustripdata <- read.csv("mnrrh.csv")
+bustripdata %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("% of on time arrivals")
 ```
