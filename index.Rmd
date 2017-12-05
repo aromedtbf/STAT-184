@@ -1,14 +1,12 @@
 ---
 title: "The Metropolitan Transportation Authority of New York City"
-author: Anthony Josue Roman
-output: github_document
-always_allow_html: yes
+author: "Anthony Josue Roman"
+output: 
+  html_document:
+    fig_height: 3
+    fig_width: 5
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
+<!-- Don't edit in between this line and the one below -->
 ```{r include=FALSE}
 # Don't delete this chunk if you are using the DataComputing package
 library(DataComputing)
@@ -32,13 +30,15 @@ require(dplyr)
 ```{r, results='asis', echo=FALSE}
 includeSourceDocuments()
 ```
+<!-- Don't edit the material above this line -->
 
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.  
 In order to use this data, I had to apply through its website in order to obtain this data. The given data will be provided along with this file, and in the website. In order to make this data easier to read, there were csv files created in order to yield a viable graph and for data wrangling purposes.
 
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r echo=FALSE, fig.height=5, fig.width=4, message=FALSE, warning=FALSE, paged.print=FALSE}
+# Uncomment and use set_api_key() on terminal. Use this key b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
 feedlist_df <- get_feedlist() %>%
   filter(grepl('NYC Subway GTFS', t, ignore.case= TRUE))
 NYC <- import_gtfs(feedlist_df$url_d)
@@ -93,7 +93,7 @@ knitr::kable(mnrr1)
 
 Below is the Metro North Hudson line, where we will analyse the data on the percentage that the trains arrive on time.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
@@ -308,7 +308,7 @@ mnrrt %>%
 
 Below is the total ridership over the years from 2008 to 2010, and the MTA also included the target ridership per year. 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
