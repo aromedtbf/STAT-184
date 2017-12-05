@@ -109,6 +109,125 @@ mtass <-
 knitr::kable(mtass)
 ```
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtass <- 
+  mtas %>%
+  filter(INDICATOR_SEQ == 103929)
+mtassa <-
+  mtass %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasst <-
+  mtass %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtassa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
+  stat_smooth(color="red") +
+  geom_point(color="red") + 
+  xlab("Year") + 
+  ylab("Total Ridership") +
+  ggtitle("Actual Annual Ridership in NYC Subway")
+mtasst %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
+  stat_smooth(color="blue") +
+  geom_point(color="blue") + 
+  xlab("Year") + 
+  ylab("Total Ridership") +
+  ggtitle("Target Annual Ridership in NYC Subway")
+```
+
+The total ridership for 2017 is low mainly since not all the data for 2017 has been recorded yet. so this will be considered an outlier for now. Disregarding the outlier, there is an increase in ridership in New York City's subways annually, despite the shutdowns and Hurricane Sandy's affects on the system.
+
+## Customer Injury Rate in Subways
+
+Injuries in the subway cause delays, and are also recorded. The table and graphs below present the data gathered from this topic. Unfortunately despite the target rates decreasing, the actual rates do decrease but increase by 2017. In order to combat this, the MTA plans on adding barriers to prevent any injuries from occuring.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtass <- 
+  mtas %>%
+  filter(INDICATOR_SEQ == 67923)
+mtass <-
+  mtass %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtass1 <- 
+  mtas %>%
+  filter(INDICATOR_SEQ == 67923)
+mtassa <-
+  mtass1 %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasst <-
+  mtass1 %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtassa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
+  stat_smooth(color="red") +
+  geom_point(color="red") + 
+  xlab("Year") + 
+  ylab("Customer Injury Rate") +
+  ggtitle("Actual Annual Customer Injury Rate")
+mtasst %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
+  stat_smooth(color="blue") +
+  geom_point(color="blue") + 
+  xlab("Year") + 
+  ylab("Customer Injury Rate") +
+  ggtitle("Target Annual Customer Injury Rate")
+```
+
+## OTP (On Time Performance) in the A Division (IRT: Interborough Rapid Transit)
+
+The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines. I will work on the trunk lines as well. I will also work on the actual data since this is a comparison between the lines. 
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtasa <- 
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(391691,391692,391693,391694,391695,391696,391697))
+mtass <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtasaa <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasat <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtasaa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Actual Annual On Time Percentage (Terminal)")
+mtasat %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() +
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Target Annual On Time Percentage (Terminal)")
+```
+
 ## New York City Bus
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
@@ -344,7 +463,7 @@ mnrra <-
   filter(type == "actual")
 mnrra %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
@@ -361,7 +480,7 @@ mnrrt <-
   filter(type == "target")
 mnrrt %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
