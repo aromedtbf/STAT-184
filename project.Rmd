@@ -32,14 +32,24 @@ includeSourceDocuments()
 ```
 <!-- Don't edit the material above this line -->
 
+Note: Actual document is on [here](https://aromedtbf.github.io/STAT-184/), whereas this is just an html link for the gtfs document to work.
+
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.  
 In order to use this data, I had to apply through its website in order to obtain this data. The given data will be provided along with this file, and in the website. In order to make this data easier to read, there were csv files created in order to yield a viable graph and for data wrangling purposes.
 
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well. Below is a representation of the New York City Transit.
-```{r}
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+# use this in order to have the program to work just uncomment:
+#if (!require(devtools)) {
+#    install.packages('devtools')
+#}
+#devtools::install_github('ropensci/gtfsr')
 ```
 ```{r echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, paged.print=TRUE}
-# Uncomment and use set_api_key() on terminal. Use this key b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
+# Uncomment and use set_api_key() on console Use enter this key on console when it asks 
+# for the prompt:
+# b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
+# then this should work
 feedlist_df <- get_feedlist() %>%
   filter(grepl('NYC Subway GTFS', t, ignore.case= TRUE))
 NYC <- import_gtfs(feedlist_df$url_d)
