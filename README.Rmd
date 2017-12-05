@@ -380,3 +380,5 @@ ir %>%
   ylab("Total Ridership") +
   ggtitle("Annual Customer Injury Rates for the Metro North")
 ```
+
+The actual customer injury rates did show an decrease from 2014 through present due to advertisements and actions made in order to prevent any further injuries. 
