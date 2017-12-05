@@ -41,7 +41,7 @@ An HTML Document with an interactive map is shown [here](https://aromedtbf.githu
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well.
 
 ## New York City Transit
-Below is a whole list of NYCT Data and I will work on a few sections for this project due to time constraints.
+Below is a whole list of NYCT Data and I will work on a few sections for this project.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
@@ -74,6 +74,9 @@ Below is the data used for the graph above, which explains the completed trip pe
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 bustripdata <- read.csv("bustrip.csv")
+bustripdata <-
+  bustripdata %>%
+  select(PERIOD_YEAR,count,type)
 knitr::kable(bustripdata)
 ```
 
