@@ -109,7 +109,7 @@ mtass <-
 knitr::kable(mtass)
 ```
 
-```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -147,7 +147,7 @@ The total ridership for 2017 is low mainly since not all the data for 2017 has b
 
 Injuries in the subway cause delays, and are also recorded. The table and graphs below present the data gathered from this topic. Unfortunately despite the target rates decreasing, the actual rates do decrease but increase by 2017. In order to combat this, the MTA plans on adding barriers to prevent any injuries from occuring.
 
-```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -195,7 +195,7 @@ The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 
 
 Below is the on time performance for the A Division.
 
-```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -236,7 +236,7 @@ mtasat %>%
 
 Below is the on wait time performance for the A Division.
 
-```{r echo=FALSE, fig.height=5, fig.width=5, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -339,7 +339,7 @@ knitr::kable(hudson)
 
 Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrrh <- read.csv("mnrrh.csv")
 mnrrh %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -369,7 +369,7 @@ pjl <-
 knitr::kable(pjl)
 ```
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -406,7 +406,7 @@ nhl <-
 knitr::kable(nhl)
 ```
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 nhl <-
   mnrr %>%
@@ -442,7 +442,7 @@ hl <-
 knitr::kable(hl)
 ```
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 hl <-
   mnrr %>%
@@ -478,7 +478,7 @@ pvl <-
 knitr::kable(pvl)
 ```
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 pvl <-
   mnrr %>%
@@ -499,7 +499,7 @@ pvl %>%
 
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -516,7 +516,7 @@ mnrra %>%
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
-```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -589,7 +589,7 @@ knitr::kable(ir)
 
 Below is the graph that compares the targeted injury rates and the actual injury rates.
 
-```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 ir <-
   mnrr %>%
