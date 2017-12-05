@@ -281,7 +281,7 @@ The BMT/IND contain the lettered lines (minus the Grand Central Shuttle, which i
 
 Below is the on time performance for the B Division.
 
-```{r echo=FALSE, fig.height=6, fig.width=8, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -322,7 +322,7 @@ mtasat %>%
 
 Below is the on wait time performance for the B Division.
 
-```{r echo=FALSE, fig.height=6, fig.width=8, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -358,6 +358,7 @@ mtasat %>%
   ylab("On Time Percentage") +
   ggtitle("Target Annual Wait Time Percentage Percentage")
 ```
+
 
 ## New York City Bus
 
