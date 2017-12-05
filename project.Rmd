@@ -207,7 +207,7 @@ mtasst %>%
   ggtitle("Target Annual Customer Injury Rate")
 ```
 
-## Division (IRT: Interborough Rapid Transit)
+## A Division (IRT: Interborough Rapid Transit)
 
 The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines. I will work on the trunk lines as well. I will also work on the actual data since this is a comparison between the lines. 
 
