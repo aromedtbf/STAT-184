@@ -55,6 +55,11 @@ mtas1 <-
 knitr::kable(mtas1)
 ```
 
+## New York City Subway
+
+Below is the data gathered from the subway lines, A-Division (also known as the IRT), which consists the 1,2,3,4,5,6 and 7 (technically the BMT/B-Division) lines.  
+The B-Division (BMT and IND) consists of the A,B,C,D,E,F,G,J,L,M,N,Q,R,W, and Z lines.
+
 ## New York City Bus
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
