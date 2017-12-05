@@ -43,7 +43,7 @@ feedlist_df <- get_feedlist() %>%
   filter(grepl('NYC Subway GTFS', t, ignore.case= TRUE))
 NYC <- import_gtfs(feedlist_df$url_d)
 routes <- NYC[['routes_df']] %>%
-  slice(which(grepl('1|2|3|4|5|6|7|a|b|c|d|e|f|n|r|w', route_id, ignore.case=TRUE))) %>%
+  slice(which(grepl('1|2|3|4|5|6|7|a|b|c|d|e|f|g|j|m|n|q|r|s|w|z', route_id, ignore.case=TRUE))) %>%
   '$'('route_id')
 NYC %>% map_gtfs(route_ids = routes)
 ```
