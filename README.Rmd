@@ -302,6 +302,7 @@ mtasat <-
   mtasa %>%
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
+
 mtasaa %>% 
   ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
@@ -309,6 +310,7 @@ mtasaa %>%
   xlab("Year") + 
   ylab("On Time Percentage") +
   ggtitle("Actual Annual On Time Percentage (Terminal)")
+
 mtasat %>% 
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
@@ -318,6 +320,7 @@ mtasat %>%
   ggtitle("Target Annual On Time Percentage (Terminal)")
 ```
 
+  
 ### Wait Assessment Time
 
 Below is the on wait time performance for the B Division.
@@ -343,6 +346,7 @@ mtasat <-
   mtasa %>%
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
+
 mtasaa %>% 
   ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
@@ -350,6 +354,7 @@ mtasaa %>%
   xlab("Year") + 
   ylab("Percentage Assessment Time") +
   ggtitle("Actual Annual Wait Time Percentage Percentage")
+
 mtasat %>% 
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
@@ -358,7 +363,7 @@ mtasat %>%
   ylab("On Time Percentage") +
   ggtitle("Target Annual Wait Time Percentage Percentage")
 ```
-
+  
 
 ## New York City Bus
 
