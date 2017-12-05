@@ -60,6 +60,35 @@ knitr::kable(mtas1)
 Below is the data gathered from the subway lines, A-Division (also known as the IRT), which consists the 1,2,3,4,5,6 and 7 (technically the BMT/B-Division) lines.  
 The B-Division (BMT and IND) consists of the A,B,C,D,E,F,G,J,L,M,N,Q,R,W, and Z lines.
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtass <-
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(67816,67823,67923,103929))
+mtass <-
+  mtass %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtass <- 
+  mtas %>%
+  filter(INDICATOR_SEQ > 391690)
+mtass <-
+  mtass %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+```
 ## New York City Bus
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
