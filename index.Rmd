@@ -37,7 +37,7 @@ In order to use this data, I had to apply through its website in order to obtain
 
 New York City is one of the most populated cities in the world, and has one of the largest public transportation systems in the world as well. Below is a representation of the New York City Transit.
 
-```{r echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, paged.print=TRUE}
 # Uncomment and use set_api_key() on terminal. Use this key b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
 feedlist_df <- get_feedlist() %>%
   filter(grepl('NYC Subway GTFS', t, ignore.case= TRUE))
@@ -52,7 +52,7 @@ NYC %>% map_gtfs(route_ids = routes)
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 bustripdata <- read.csv("bustrip.csv")
 bustripdata %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -110,7 +110,7 @@ knitr::kable(hudson)
 
 Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrrh <- read.csv("mnrrh.csv")
 mnrrh %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
@@ -140,7 +140,7 @@ pjl <-
 knitr::kable(pjl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -177,7 +177,7 @@ nhl <-
 knitr::kable(nhl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 nhl <-
   mnrr %>%
@@ -213,7 +213,7 @@ hl <-
 knitr::kable(hl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 hl <-
   mnrr %>%
@@ -249,7 +249,7 @@ pvl <-
 knitr::kable(pvl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 pvl <-
   mnrr %>%
@@ -270,7 +270,7 @@ pvl %>%
 
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -287,7 +287,7 @@ mnrra %>%
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -308,7 +308,7 @@ mnrrt %>%
 
 Below is the total ridership over the years from 2008 to 2010, and the MTA also included the target ridership per year. 
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
@@ -323,7 +323,7 @@ ridership <-
 knitr::kable(ridership)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 ridership <-
   mnrr %>%
