@@ -273,6 +273,91 @@ mtasat %>%
   ggtitle("Target Annual Wait Time Percentage Percentage")
 ```
 
+## B Division (BMT/IND Lines)
+
+The BMT/IND contain the lettered lines (minus the Grand Central Shuttle, which is IRT). The BMT span Brooklyn, Manhattan, and Queens, the IND span four of the five boroughs and consist of the A,C,E,B,D,F and G lines. The BMT consist of the J,M,Z,L,N,Q,R, and W lines. The trunk lines for the IND are the Eigth Avenue (A,C,E), Sixth Avenue (B,D,F,M) and the Crosstown (G) trunk lines. As for the BMT lines, it consists of the Broadway Line (N,Q,R,W), Canarsie (L) and Nassau (J,Z) trunk lines. The BMT/IND lines are used heavily but the Crosstown line is kind of light due to it not going through Manhattan. The Eigth avenue line, speciffically the A is used a lot since it takes care of the customers who need to go to JFK, and the Sixth Avenue in general endures heavy ridership. The Broadway line endures heavy ridership especially since the Q was extended to 96th Street-2nd Avenue.
+
+### On Time Performance (Terminal)
+
+Below is the on time performance for the B Division.
+
+```{r echo=FALSE, fig.height=6, fig.width=8, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtasa <- 
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(391699,391700,391701,391702,391703,391704,391706,391707,391708,391709,391710,391711,391712))
+mtass <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtasaa <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasat <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtasaa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Actual Annual On Time Percentage (Terminal)")
+mtasat %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() +
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Target Annual On Time Percentage (Terminal)")
+```
+
+### Wait Assessment Time
+
+Below is the on wait time performance for the B Division.
+
+```{r echo=FALSE, fig.height=6, fig.width=8, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtasa <- 
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(391699,391700,391701,391702,391703,391704,391706,391707,391708,391709,391710,391711,391712))
+mtass <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtasaa <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasat <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtasaa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("Percentage Assessment Time") +
+  ggtitle("Actual Annual Wait Time Percentage Percentage")
+mtasat %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() +
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Target Annual Wait Time Percentage Percentage")
+```
 
 ## New York City Bus
 
