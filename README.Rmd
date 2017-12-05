@@ -328,3 +328,40 @@ ridership %>%
   ylab("Total Ridership") +
   ggtitle("Annual Ridership for the Metro North")
 ```
+
+You notice that there is a decrease in ridership from 2015 to 2017 since there were incidents that occured. Also, 2017 is not complete as of yet since it only goes up to November of 2017. There was also derailments that did affect the line throughout these years that affected the lines along with Penn Station being closed down to fix the tracks. Amtrak had to use the tracks in Grand Central, which shared the tracks along with Metro North.
+
+## Customer Injury Rate
+
+Below is the table for the customer injury rate from 2008 through 2017.  
+
+```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+ir <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28530)
+ir <-
+  ir %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(ir)
+```
+
+Below is the graph that compares the targeted injury rates and the actual injury rates.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("mnrr.csv")
+ir <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==28530)
+ir %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("Total Ridership") +
+  ggtitle("Annual Customer Injury Rates for the Metro North")
+```
