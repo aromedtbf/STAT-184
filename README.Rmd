@@ -109,7 +109,7 @@ mtass <-
 knitr::kable(mtass)
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -147,7 +147,7 @@ The total ridership for 2017 is low mainly since not all the data for 2017 has b
 
 Injuries in the subway cause delays, and are also recorded. The table and graphs below present the data gathered from this topic. Unfortunately despite the target rates decreasing, the actual rates do decrease but increase by 2017. In order to combat this, the MTA plans on adding barriers to prevent any injuries from occuring.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -187,11 +187,15 @@ mtasst %>%
   ggtitle("Target Annual Customer Injury Rate")
 ```
 
-## OTP (On Time Performance) in the A Division (IRT: Interborough Rapid Transit)
+## Division (IRT: Interborough Rapid Transit)
 
 The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines. I will work on the trunk lines as well. I will also work on the actual data since this is a comparison between the lines. 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+### On Time Performance (Terminal)
+
+Below is the on time performance for the A Division.
+
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
@@ -228,15 +232,57 @@ mtasat %>%
   ggtitle("Target Annual On Time Percentage (Terminal)")
 ```
 
+### Wait Assessment Time
+
+Below is the on wait time performance for the A Division.
+
+```{r echo=FALSE, fig.height=5, fig.width=5, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtasa <- 
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(392297,392300,392303,392306,392309,392312,392315))
+mtass <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtasaa <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasat <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtasaa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("Percentage Assessment Time") +
+  ggtitle("Actual Annual Wait Time Percentage Percentage")
+mtasat %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
+  stat_smooth(se=FALSE) +
+  geom_point() +
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Target Annual Wait Time Percentage Percentage")
+```
+
+
 ## New York City Bus
 
 Below is a comparison between the Completed and projected Trips from MTA Bus and MTA New York City Bus. Note: On 2012, Hurricane Sandy did affect service, along with other years due to suspension of service.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 bustripdata <- read.csv("bustrip.csv")
 bustripdata %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of Completed Trips") +
@@ -293,11 +339,11 @@ knitr::kable(hudson)
 
 Below is the data used for the graph above, which explains the percentage that the trains arrive on time per year. The type shows the difference between the actual and target (predicted) data gathered for the MNRR Hudson Line.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrrh <- read.csv("mnrrh.csv")
 mnrrh %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
@@ -323,7 +369,7 @@ pjl <-
 knitr::kable(pjl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 pjl <-
   mnrr %>%
@@ -333,7 +379,7 @@ pjl <-
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 pjl %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
@@ -360,7 +406,7 @@ nhl <-
 knitr::kable(nhl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 nhl <-
   mnrr %>%
@@ -370,7 +416,7 @@ nhl <-
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 nhl %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
@@ -396,7 +442,7 @@ hl <-
 knitr::kable(hl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 hl <-
   mnrr %>%
@@ -406,7 +452,7 @@ hl <-
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 hl %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
@@ -432,7 +478,7 @@ pvl <-
 knitr::kable(pvl)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 pvl <-
   mnrr %>%
@@ -442,7 +488,7 @@ pvl <-
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
 pvl %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("% of on time arrivals") +
@@ -453,7 +499,7 @@ pvl %>%
 
 Below shows the comparisons between all the MNRR trunk line actual and target arrival times, with each indicator name being the name of the MNRR trunk line.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -470,7 +516,7 @@ mnrra %>%
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 mnrr <- read.csv("mnrr.csv")
 mnrr1 <- 
   mnrr %>% 
@@ -506,14 +552,14 @@ ridership <-
 knitr::kable(ridership)
 ```
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 ridership <-
   mnrr %>%
   filter(INDICATOR_SEQ==55512)
 ridership %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("Total Ridership") +
@@ -543,14 +589,14 @@ knitr::kable(ir)
 
 Below is the graph that compares the targeted injury rates and the actual injury rates.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 ir <-
   mnrr %>%
   filter(INDICATOR_SEQ==28530)
 ir %>% 
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
-  stat_smooth() +
+  stat_smooth(se=FALSE) +
   geom_point() + 
   xlab("Year") + 
   ylab("Total Ridership") +
