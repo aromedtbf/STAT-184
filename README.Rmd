@@ -94,7 +94,7 @@ knitr::kable(mtass)
 
 Below is a table for the total annual ridership in the subways from 2008 to 2017.
 
-```{r}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
