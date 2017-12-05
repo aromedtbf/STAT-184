@@ -335,7 +335,7 @@ You notice that there is a decrease in ridership from 2015 to 2017 since there w
 
 Below is the table for the customer injury rate from 2008 through 2017.  
 
-```{r message=FALSE, warning=FALSE, paged.print=TRUE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
 mnrr <- 
   mnrr %>% 
@@ -352,7 +352,7 @@ knitr::kable(ir)
 
 Below is the graph that compares the targeted injury rates and the actual injury rates.
 
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
 ir <-
   mnrr %>%
