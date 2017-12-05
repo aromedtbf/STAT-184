@@ -293,3 +293,35 @@ mnrrt %>%
   ggtitle("Target Arrival Times for Each Trunk Line")
 ```
 
+## Total Ridership
+
+Below is the total ridership over the years from 2008 to 2010, and the MTA also included the target ridership per year. 
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("MTA_Performance_MNR.csv")
+mnrr <- 
+  mnrr %>% 
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+ridership <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==55512)
+ridership <-
+  ridership %>%
+  group_by(PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(ridership)
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+mnrr <- read.csv("mnrr.csv")
+ridership <-
+  mnrr %>%
+  filter(INDICATOR_SEQ==55512)
+ridership %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
+  stat_smooth() +
+  geom_point() + 
+  xlab("Year") + 
+  ylab("Total Ridership") +
+  ggtitle("Annual Ridership for the Metro North")
+```
