@@ -3,7 +3,7 @@ title: "The Metropolitan Transportation Authority of New York City"
 author: "Anthony Josue Roman"
 output: 
   html_document:
-    css: assets/css/style.css
+    css: "assets/css/style.scss"
     fig_height: 3
     fig_width: 5
 ---
