@@ -11,14 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r include=FALSE}
 # Don't delete this chunk if you are using the DataComputing package
-library(DataComputing)
-library(mosaic)
-library(mosaicData)
-library(dplyr)
-library(ggplot2)
-library(gtfsr)
-library(magrittr)
-library(dplyr)
 require(DataComputing)
 require(mosaic)
 require(mosaicData)
@@ -27,6 +19,14 @@ require(ggplot2)
 require(gtfsr)
 require(magrittr)
 require(dplyr)
+library(DataComputing)
+library(mosaic)
+library(mosaicData)
+library(dplyr)
+library(ggplot2)
+library(gtfsr)
+library(magrittr)
+library(dplyr)
 ```
 *Source file* 
 ```{r, results='asis', echo=FALSE}
@@ -187,9 +187,97 @@ mtasst %>%
   ggtitle("Target Annual Customer Injury Rate")
 ```
 
+The anticipated annual target customer injury rate was expected to decrease but looking at the actual data, the actual annual injury rate decreases and then increases from 2015 to 2017. The MTA is doing their best to decrease the injury rate, specifically when people fall into the tracks, etc.
+
+## Wait Assesment Times in New York City's Subways
+
+The data below will show the wait assessment times in the entire subway system.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtasa <- 
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(392289))
+mtass <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtasaa <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasat <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+
+mtasaa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
+  stat_smooth(se=FALSE,color='red') +
+  geom_point(color='red') + 
+  xlab("Year") + 
+  ylab("Percentage Assessment Time") +
+  ggtitle("Actual Annual Wait Time Percentage")
+
+mtasat %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
+  stat_smooth(se=FALSE,color='blue') +
+  geom_point(color='blue') +
+  xlab("Year") + 
+  ylab("Percentage Assessment Time") +
+  ggtitle("Target Annual Wait Time Percentage")
+```
+
+The target annual wait time was supposed to increase but unfortunately it increased from 2008 to 2013, but started to decrease from 2013 to 2017 since the system for one is old and is undergoing repairs. It is still recovering from Hurricane Sandy which crippled the system in 2012.
+
+## On Time Performance in New York City Subway
+
+Below is the on time performance.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+mtas <- read.csv('MTA_Performance_NYCT.csv')
+mtas <-
+  mtas %>%
+  select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
+mtasa <- 
+  mtas %>%
+  filter(INDICATOR_SEQ %in% c(391690))
+mtass <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
+knitr::kable(mtass)
+mtasaa <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgactual=mean(YTD_ACTUAL))
+mtasat <-
+  mtasa %>%
+  group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
+  summarise(avgtarget=mean(YTD_TARGET))
+mtasaa %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
+  stat_smooth(se=FALSE,color='red') +
+  geom_point(color='red') + 
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Actual Annual On Time Percentage (Terminal)")
+mtasat %>% 
+  ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
+  stat_smooth(se=FALSE,color='blue') +
+  geom_point(color='blue') +
+  xlab("Year") + 
+  ylab("On Time Percentage") +
+  ggtitle("Target Annual On Time Percentage (Terminal)")
+```
+
 ## A Division (IRT: Interborough Rapid Transit)
 
-The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines. I will work on the trunk lines as well. I will also work on the actual data since this is a comparison between the lines. 
+The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines. 
 
 ### On Time Performance (Terminal)
 
@@ -263,14 +351,14 @@ mtasaa %>%
   geom_point() + 
   xlab("Year") + 
   ylab("Percentage Assessment Time") +
-  ggtitle("Actual Annual Wait Time Percentage Percentage")
+  ggtitle("Actual Annual Wait Time Percentage")
 mtasat %>% 
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
   geom_point() +
   xlab("Year") + 
-  ylab("On Time Percentage") +
-  ggtitle("Target Annual Wait Time Percentage Percentage")
+  ylab("Percentage Assessment Time") +
+  ggtitle("Target Annual Wait Time Percentage")
 ```
 
 ## B Division (BMT/IND Lines)
@@ -360,7 +448,7 @@ mtasat %>%
   stat_smooth(se=FALSE) +
   geom_point() +
   xlab("Year") + 
-  ylab("On Time Percentage") +
+  ylab("Percentage Assessment Time") +
   ggtitle("Target Annual Wait Time Percentage Percentage")
 ```
   
