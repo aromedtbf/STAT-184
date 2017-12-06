@@ -501,7 +501,23 @@ knitr::kable(bustripdata)
 
 ## Metro North Railroad
 
-This is the Metro North Railroad with multiple indicator types, and I will focus on the MNRR Hudson Harlem and Port Jervis Lines.
+Below is a diagram of the Metro North Lines.
+
+```{r echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, paged.print=TRUE}
+# Uncomment and use set_api_key() on console Use enter this key on console when it asks 
+# for the prompt:
+# b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
+# then this should work
+feedlist_df <- get_feedlist() %>%
+  filter(grepl('Metro-North Railroad GTFS', t, ignore.case= TRUE))
+NYC <- import_gtfs(feedlist_df$url_d)
+routes <- NYC[['routes_df']] %>%
+  slice(which(grepl('1|2|3|4|5|6', route_id, ignore.case=TRUE))) %>%
+  '$'('route_id')
+NYC %>% map_gtfs(route_ids = routes)
+```
+
+This is the Metro North Railroad with multiple indicator types, and I will focus on multiple MNRR lines. The Metro North Railroad serves most of the northern part of New York and Conneticuit, it is one of the systems that endures heavy ridership as well.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")

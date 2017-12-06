@@ -482,7 +482,7 @@ knitr::kable(bustripdata)
 
 ## Metro North Railroad
 
-This is the Metro North Railroad with multiple indicator types, and I will focus on the MNRR Hudson Harlem and Port Jervis Lines.
+This is the Metro North Railroad with multiple indicator types, and I will focus on multiple MNRR lines. The Metro North Railroad serves most of the northern part of New York and Conneticuit, it is one of the systems that endures heavy ridership as well.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
