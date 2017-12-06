@@ -9,14 +9,6 @@ output:
 <!-- Don't edit in between this line and the one below -->
 ```{r include=FALSE}
 # Don't delete this chunk if you are using the DataComputing package
-library(DataComputing)
-library(mosaic)
-library(mosaicData)
-library(dplyr)
-library(ggplot2)
-library(gtfsr)
-library(magrittr)
-library(dplyr)
 require(DataComputing)
 require(mosaic)
 require(mosaicData)
@@ -25,6 +17,14 @@ require(ggplot2)
 require(gtfsr)
 require(magrittr)
 require(dplyr)
+library(DataComputing)
+library(mosaic)
+library(mosaicData)
+library(dplyr)
+library(ggplot2)
+library(gtfsr)
+library(magrittr)
+library(dplyr)
 ```
 *Source file* 
 ```{r, results='asis', echo=FALSE}
