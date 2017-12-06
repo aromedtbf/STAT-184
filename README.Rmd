@@ -236,7 +236,7 @@ The target annual wait time was supposed to increase but unfortunately it increa
 
 ## On Time Performance in New York City Subway
 
-Below is the on time performance.
+Below is the on time performance for the entire subway system.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
@@ -274,6 +274,8 @@ mtasat %>%
   ylab("On Time Percentage") +
   ggtitle("Target Annual On Time Percentage (Terminal)")
 ```
+
+The acutal on time percentage decreases from 2009 to 2017 and this is mainly since the subway system is over a century old. Repairs are being made and the MTA is doing their best to combat this issue.
 
 ## A Division (IRT: Interborough Rapid Transit)
 
