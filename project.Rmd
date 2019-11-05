@@ -1,7 +1,7 @@
 ---
 title: "The Metropolitan Transportation Authority of New York City"
 author: "Anthony Josue Roman"
-output: 
+output:
   html_document:
     fig_height: 3
     fig_width: 5
@@ -26,13 +26,13 @@ library(gtfsr)
 library(magrittr)
 library(dplyr)
 ```
-*Source file* 
+*Source file*
 ```{r, results='asis', echo=FALSE}
 includeSourceDocuments()
 ```
 <!-- Don't edit the material above this line -->
 
-Note: Actual document is on [here](https://aromedtbf.github.io/STAT-184/), whereas this is just an html link for the gtfs document to work.
+Note: Actual document is on [here](https://spacerome.github.io/STAT-184/), whereas this is just an html link for the gtfs document to work.
 
 I will begin analysing the data provided from New York City's transportation authority, also known as the MTA. The following data used will include success and failure rates for each department.  
 In order to use this data, I had to apply through its website in order to obtain this data. The given data will be provided along with this file, and in the website. In order to make this data easier to read, there were csv files created in order to yield a viable graph and for data wrangling purposes.
@@ -46,7 +46,7 @@ New York City is one of the most populated cities in the world, and has one of t
 #devtools::install_github('ropensci/gtfsr')
 ```
 ```{r echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, paged.print=TRUE}
-# Uncomment and use set_api_key() on console Use enter this key on console when it asks 
+# Uncomment and use set_api_key() on console Use enter this key on console when it asks
 # for the prompt:
 # b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
 # then this should work
@@ -93,13 +93,13 @@ mtass <-
   summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
 knitr::kable(mtass)
 ```
-  
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtass <- 
+mtass <-
   mtas %>%
   filter(INDICATOR_SEQ > 391690)
 mtass <-
@@ -108,7 +108,7 @@ mtass <-
   summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
 knitr::kable(mtass)
 ```
-  
+
 ### Total Ridership - NYC Subways
 
 Below is a table for the total annual ridership in the subways from 2008 to 2017.
@@ -118,7 +118,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtass <- 
+mtass <-
   mtas %>%
   filter(INDICATOR_SEQ == 103929)
 mtass <-
@@ -133,7 +133,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtass <- 
+mtass <-
   mtas %>%
   filter(INDICATOR_SEQ == 103929)
 mtassa <-
@@ -144,18 +144,18 @@ mtasst <-
   mtass %>%
   group_by(PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
-mtassa %>% 
+mtassa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
   stat_smooth(color="red") +
-  geom_point(color="red") + 
-  xlab("Year") + 
+  geom_point(color="red") +
+  xlab("Year") +
   ylab("Total Ridership") +
   ggtitle("Actual Annual Ridership in NYC Subway")
-mtasst %>% 
+mtasst %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
   stat_smooth(color="blue") +
-  geom_point(color="blue") + 
-  xlab("Year") + 
+  geom_point(color="blue") +
+  xlab("Year") +
   ylab("Total Ridership") +
   ggtitle("Target Annual Ridership in NYC Subway")
 ```
@@ -171,7 +171,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtass <- 
+mtass <-
   mtas %>%
   filter(INDICATOR_SEQ == 67923)
 mtass <-
@@ -179,7 +179,7 @@ mtass <-
   group_by(PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET),avgactual=mean(YTD_ACTUAL))
 knitr::kable(mtass)
-mtass1 <- 
+mtass1 <-
   mtas %>%
   filter(INDICATOR_SEQ == 67923)
 mtassa <-
@@ -190,18 +190,18 @@ mtasst <-
   mtass1 %>%
   group_by(PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
-mtassa %>% 
+mtassa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
   stat_smooth(color="red") +
-  geom_point(color="red") + 
-  xlab("Year") + 
+  geom_point(color="red") +
+  xlab("Year") +
   ylab("Customer Injury Rate") +
   ggtitle("Actual Annual Customer Injury Rate")
-mtasst %>% 
+mtasst %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
   stat_smooth(color="blue") +
-  geom_point(color="blue") + 
-  xlab("Year") + 
+  geom_point(color="blue") +
+  xlab("Year") +
   ylab("Customer Injury Rate") +
   ggtitle("Target Annual Customer Injury Rate")
 ```
@@ -217,7 +217,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtasa <- 
+mtasa <-
   mtas %>%
   filter(INDICATOR_SEQ %in% c(392289))
 mtass <-
@@ -234,19 +234,19 @@ mtasat <-
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
 
-mtasaa %>% 
+mtasaa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
   stat_smooth(se=FALSE,color='red') +
-  geom_point(color='red') + 
-  xlab("Year") + 
+  geom_point(color='red') +
+  xlab("Year") +
   ylab("Percentage Assessment Time") +
   ggtitle("Actual Annual Wait Time Percentage")
 
-mtasat %>% 
+mtasat %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
   stat_smooth(se=FALSE,color='blue') +
   geom_point(color='blue') +
-  xlab("Year") + 
+  xlab("Year") +
   ylab("Percentage Assessment Time") +
   ggtitle("Target Annual Wait Time Percentage")
 ```
@@ -262,7 +262,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtasa <- 
+mtasa <-
   mtas %>%
   filter(INDICATOR_SEQ %in% c(391690))
 mtass <-
@@ -278,18 +278,18 @@ mtasat <-
   mtasa %>%
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
-mtasaa %>% 
+mtasaa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual)) +
   stat_smooth(se=FALSE,color='red') +
-  geom_point(color='red') + 
-  xlab("Year") + 
+  geom_point(color='red') +
+  xlab("Year") +
   ylab("On Time Percentage") +
   ggtitle("Actual Annual On Time Percentage (Terminal)")
-mtasat %>% 
+mtasat %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget)) +
   stat_smooth(se=FALSE,color='blue') +
   geom_point(color='blue') +
-  xlab("Year") + 
+  xlab("Year") +
   ylab("On Time Percentage") +
   ggtitle("Target Annual On Time Percentage (Terminal)")
 ```
@@ -298,7 +298,7 @@ The acutal on time percentage decreases from 2009 to 2017 and this is mainly sin
 
 ## A Division (IRT: Interborough Rapid Transit)
 
-The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines. 
+The IRT contains the numbered lines and spans from The Bronx to Brooklyn, the 7 is technically BMT but has IRT cars. The IRT has lines that are heavy in ridership, for example the Lexington Avenue line that contains the 4,5 and 6. Below compares the On time performance of the IRT lines.
 
 ### On Time Performance (Terminal)
 
@@ -309,7 +309,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtasa <- 
+mtasa <-
   mtas %>%
   filter(INDICATOR_SEQ %in% c(391691,391692,391693,391694,391695,391696,391697))
 mtass <-
@@ -325,18 +325,18 @@ mtasat <-
   mtasa %>%
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
-mtasaa %>% 
+mtasaa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("On Time Percentage") +
   ggtitle("Actual Annual On Time Percentage (Terminal)")
-mtasat %>% 
+mtasat %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
   geom_point() +
-  xlab("Year") + 
+  xlab("Year") +
   ylab("On Time Percentage") +
   ggtitle("Target Annual On Time Percentage (Terminal)")
 ```
@@ -350,7 +350,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtasa <- 
+mtasa <-
   mtas %>%
   filter(INDICATOR_SEQ %in% c(392297,392300,392303,392306,392309,392312,392315))
 mtass <-
@@ -366,18 +366,18 @@ mtasat <-
   mtasa %>%
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
-mtasaa %>% 
+mtasaa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("Percentage Assessment Time") +
   ggtitle("Actual Annual Wait Time Percentage")
-mtasat %>% 
+mtasat %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
   geom_point() +
-  xlab("Year") + 
+  xlab("Year") +
   ylab("Percentage Assessment Time") +
   ggtitle("Target Annual Wait Time Percentage")
 ```
@@ -395,7 +395,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtasa <- 
+mtasa <-
   mtas %>%
   filter(INDICATOR_SEQ %in% c(391699,391700,391701,391702,391703,391704,391706,391707,391708,391709,391710,391711,391712))
 mtass <-
@@ -412,24 +412,24 @@ mtasat <-
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
 
-mtasaa %>% 
+mtasaa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("On Time Percentage") +
   ggtitle("Actual Annual On Time Percentage (Terminal)")
 
-mtasat %>% 
+mtasat %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
   geom_point() +
-  xlab("Year") + 
+  xlab("Year") +
   ylab("On Time Percentage") +
   ggtitle("Target Annual On Time Percentage (Terminal)")
 ```
 
-  
+
 ### Wait Assessment Time
 
 Below is the on wait time performance for the B Division.
@@ -439,7 +439,7 @@ mtas <- read.csv('MTA_Performance_NYCT.csv')
 mtas <-
   mtas %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mtasa <- 
+mtasa <-
   mtas %>%
   filter(INDICATOR_SEQ %in% c(391699,391700,391701,391702,391703,391704,391706,391707,391708,391709,391710,391711,391712))
 mtass <-
@@ -456,23 +456,23 @@ mtasat <-
   group_by(INDICATOR_NAME,PERIOD_YEAR) %>%
   summarise(avgtarget=mean(YTD_TARGET))
 
-mtasaa %>% 
+mtasaa %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgactual,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("Percentage Assessment Time") +
   ggtitle("Actual Annual Wait Time Percentage Percentage")
 
-mtasat %>% 
+mtasat %>%
   ggplot(aes(x=PERIOD_YEAR,y=avgtarget,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
   geom_point() +
-  xlab("Year") + 
+  xlab("Year") +
   ylab("Percentage Assessment Time") +
   ggtitle("Target Annual Wait Time Percentage Percentage")
 ```
-  
+
 
 ## New York City Bus
 
@@ -480,15 +480,15 @@ Below is a comparison between the Completed and projected Trips from MTA Bus and
 
 ```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE, fig.width=6, fig.height=4}
 bustripdata <- read.csv("bustrip.csv")
-bustripdata %>% 
+bustripdata %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of Completed Trips") +
   ggtitle("Complteted trips for the New York City Bus")
 ```
-  
+
 Below is the data used for the graph above, which explains the completed trip percentage per year. The type shows the difference between the actual and target (predicted) data gathered for NYCT Bus.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -504,7 +504,7 @@ knitr::kable(bustripdata)
 Below is a diagram of the Metro North Lines.
 
 ```{r echo=FALSE, fig.height=10, fig.width=10, message=FALSE, warning=FALSE, paged.print=TRUE}
-# Uncomment and use set_api_key() on console Use enter this key on console when it asks 
+# Uncomment and use set_api_key() on console Use enter this key on console when it asks
 # for the prompt:
 # b742b4e5-f67d-4eac-9c90-770c2a5bc5f5
 # then this should work
@@ -521,11 +521,11 @@ This is the Metro North Railroad with multiple indicator types, and I will focus
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-mnrr1 <- 
-  mnrr %>% 
+mnrr1 <-
+  mnrr %>%
   filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
 mnrr1 <-
   mnrr1 %>%
@@ -540,11 +540,11 @@ Below is the Metro North Hudson line, where we will analyse the data on the perc
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-hudson  <- 
-  mnrr %>% 
+hudson  <-
+  mnrr %>%
   filter(INDICATOR_SEQ==28345)
 hudson <-
   hudson %>%
@@ -557,26 +557,26 @@ Below is the data used for the graph above, which explains the percentage that t
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 mnrrh <- read.csv("mnrrh.csv")
-mnrrh %>% 
+mnrrh %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Arrival Times for the Hudson Line")
 ```
 
-### Port Jervis Line 
+### Port Jervis Line
 
 Below is the Port Jervis line, where we will analyse the data on the percentage that the trains arrive on time along with its graph.
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-pjl  <- 
-  mnrr %>% 
+pjl  <-
+  mnrr %>%
   filter(INDICATOR_SEQ==28460)
 pjl <-
   pjl %>%
@@ -593,11 +593,11 @@ pjl <-
 pjl <-
   pjl %>%
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
-pjl %>% 
+pjl %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Arrival Times for the Port Jervis Line")
 ```
@@ -609,11 +609,11 @@ Below is the New Haven line, where we will analyse the data on the percentage th
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-nhl  <- 
-  mnrr %>% 
+nhl  <-
+  mnrr %>%
   filter(INDICATOR_SEQ==28347)
 nhl <-
   nhl %>%
@@ -630,11 +630,11 @@ nhl <-
 nhl <-
   nhl %>%
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
-nhl %>% 
+nhl %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Arrival Times for the New Haven Line")
 ```
@@ -645,11 +645,11 @@ Below is the Harlem line, where we will analyse the data on the percentage that 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-hl  <- 
-  mnrr %>% 
+hl  <-
+  mnrr %>%
   filter(INDICATOR_SEQ==28346)
 hl <-
   hl %>%
@@ -666,11 +666,11 @@ hl <-
 hl <-
   hl %>%
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
-hl %>% 
+hl %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Arrival Times for the Harlem Line")
 ```
@@ -681,11 +681,11 @@ Below is the Pascack Valley line, where we will analyse the data on the percenta
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
-pvl  <- 
-  mnrr %>% 
+pvl  <-
+  mnrr %>%
   filter(INDICATOR_SEQ==28461)
 pvl <-
   pvl %>%
@@ -702,11 +702,11 @@ pvl <-
 pvl <-
   pvl %>%
   select(INDICATOR_NAME,PERIOD_YEAR,count,type)
-pvl %>% 
+pvl %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Arrival Times for the Pascack Valley Line")
 ```
@@ -717,46 +717,46 @@ Below shows the comparisons between all the MNRR trunk line actual and target ar
 
 ```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
-mnrr1 <- 
-  mnrr %>% 
+mnrr1 <-
+  mnrr %>%
   filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
 mnrra <-
   mnrr1 %>%
   filter(type == "actual")
-mnrra %>% 
+mnrra %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Actual Arrival Times for Each Trunk Line")
 ```
 
 ```{r, echo=FALSE, fig.height=6, fig.width=10, message=FALSE, warning=FALSE}
 mnrr <- read.csv("mnrr.csv")
-mnrr1 <- 
-  mnrr %>% 
+mnrr1 <-
+  mnrr %>%
   filter(INDICATOR_SEQ %in% c(28346,28345,28347,28461,28460))
 mnrrt <-
   mnrr1 %>%
   filter(type == "target")
-mnrrt %>% 
+mnrrt %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=INDICATOR_NAME)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("% of on time arrivals") +
   ggtitle("Target Arrival Times for Each Trunk Line")
 ```
 
 ## Total Ridership
 
-Below is the total ridership over the years from 2008 to 2010, and the MTA also included the target ridership per year. 
+Below is the total ridership over the years from 2008 to 2010, and the MTA also included the target ridership per year.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
 ridership <-
   mnrr %>%
@@ -773,11 +773,11 @@ mnrr <- read.csv("mnrr.csv")
 ridership <-
   mnrr %>%
   filter(INDICATOR_SEQ==55512)
-ridership %>% 
+ridership %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("Total Ridership") +
   ggtitle("Annual Ridership for the Metro North")
 ```
@@ -790,8 +790,8 @@ Below is the table for the customer injury rate from 2008 through 2017.
 
 ```{r echo=FALSE, fig.width=8, message=FALSE, warning=FALSE}
 mnrr <- read.csv("MTA_Performance_MNR.csv")
-mnrr <- 
-  mnrr %>% 
+mnrr <-
+  mnrr %>%
   select(INDICATOR_SEQ,INDICATOR_NAME,PERIOD_YEAR,YTD_TARGET,YTD_ACTUAL)
 ir <-
   mnrr %>%
@@ -810,11 +810,11 @@ mnrr <- read.csv("mnrr.csv")
 ir <-
   mnrr %>%
   filter(INDICATOR_SEQ==28530)
-ir %>% 
+ir %>%
   ggplot(aes(x=PERIOD_YEAR,y=count,color=type)) +
   stat_smooth(se=FALSE) +
-  geom_point() + 
-  xlab("Year") + 
+  geom_point() +
+  xlab("Year") +
   ylab("Total Ridership") +
   ggtitle("Annual Customer Injury Rates for the Metro North")
 ```
